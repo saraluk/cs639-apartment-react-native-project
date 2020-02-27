@@ -5,7 +5,7 @@ for example,
 ```bash
 cd Desktop/cs639
 ```
-3. In terminal, type following commands
+3. In terminal, type following command
 ```bash
 git clone https://github.com/saraluk/cs639-apartment-react-native-project.git
 ```
