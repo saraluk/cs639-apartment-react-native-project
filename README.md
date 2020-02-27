@@ -17,7 +17,7 @@ cd cs639-apartment-react-native-project
 ```bash
 npm install
 ```
-6. To start working on a feature, create a new local branch in your computer**important !**
+6. To start working on a feature, create a new local branch in your computer **important !**
 ```bash
 git checkout -b feat/[branch-name]
 ```
