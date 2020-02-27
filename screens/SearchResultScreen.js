@@ -21,7 +21,7 @@ export default class SearchResultScreen extends React.Component {
             />
             <TouchableHighlight>
               <View style={styles.filterButton}>
-                <Text style={styles.filterTextButton}>Filter</Text>
+                <Text style={styles.filterTextButton}>Filterrrrrrrrrr</Text>
               </View>
             </TouchableHighlight>
           </View>
