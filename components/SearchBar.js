@@ -11,31 +11,29 @@ export default class SearchBar extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.TopBarContainer}>
-          <View style={styles.rowContainer}>
-            <View style={styles.searchBarContainer}>
-              <Ionicons style={styles.searchIcon} name='ios-search' />
-              <TextInput
-                style={styles.searchTextInput}
-                onChangeText={searchText => this.setState({ searchText })}
-                value={this.state.searchText}
-                placeholder='Search'
-              />
-            </View>
-            <TouchableHighlight>
-              <View style={styles.filterButton}>
-                <Text style={styles.filterTextButton}>Filter</Text>
-              </View>
-            </TouchableHighlight>
+        <View style={styles.rowContainer}>
+          <View style={styles.searchBarContainer}>
+            <Ionicons style={styles.searchIcon} name='ios-search' />
+            <TextInput
+              style={styles.searchTextInput}
+              onChangeText={searchText => this.setState({ searchText })}
+              value={this.state.searchText}
+              placeholder='Search'
+            />
           </View>
+          <TouchableHighlight>
+            <View style={styles.filterButton}>
+              <Text style={styles.filterTextButton}>Filter</Text>
+            </View>
+          </TouchableHighlight>
+        </View>
+        <View style={styles.rowContainer}>
           <View style={styles.rowContainer}>
-            <View style={styles.rowContainer}>
-              <Text style={styles.area}>Brooklyn</Text>
-              <Text style={styles.results}>(15 Results)</Text>
-            </View>
-            <View>
-              <Text style={styles.sortedby}>Sorted by</Text>
-            </View>
+            <Text style={styles.area}>Brooklyn</Text>
+            <Text style={styles.results}>(15 Results)</Text>
+          </View>
+          <View>
+            <Text style={styles.sortedby}>Sorted by</Text>
           </View>
         </View>
       </View>
@@ -45,10 +43,6 @@ export default class SearchBar extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#ffffff"
-  },
-  TopBarContainer: {
     height: 2 * (deviceHeight / 20),
     marginVertical: 0.5 * (deviceHeight / 20),
     marginHorizontal: 0.5 * (deviceWidth / 20),
