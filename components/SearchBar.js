@@ -8,6 +8,7 @@ export default class SearchBar extends Component {
   state = {
     searchText: ""
   };
+
   render() {
     return (
       <View style={styles.container}>
