@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import BottomTabNavigator from "./navigation/BottomTabNavigator";
 import SearchResultScreen from "./screens/SearchResultScreen";
+import ApartmentDetailScreen from "./screens/ApartmentDetailScreen";
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,16 @@ export default function App() {
           component={SearchResultScreen}
           options={{
             title: "Search Results",
+            headerStyle: { backgroundColor: "#ef4923" },
+            headerTitleStyle: { color: "#ffffff" },
+            headerTintColor: "#0a2e49"
+          }}
+        />
+        <Stack.Screen
+          name='ApartmentDetail'
+          component={ApartmentDetailScreen}
+          options={{
+            title: "Detail",
             headerStyle: { backgroundColor: "#ef4923" },
             headerTitleStyle: { color: "#ffffff" },
             headerTintColor: "#0a2e49"

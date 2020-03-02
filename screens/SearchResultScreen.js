@@ -1,22 +1,25 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, ScrollView } from "react-native";
 import SearchBar from "../components/SearchBar";
-import { ScrollView } from "react-native-gesture-handler";
 import ApartmentCard from "../components/ApartmentCard";
 
-export default class SearchResultScreen extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <SearchBar></SearchBar>
-        <ScrollView>
-          <ApartmentCard></ApartmentCard>
-          <ApartmentCard></ApartmentCard>
-          <ApartmentCard></ApartmentCard>
-        </ScrollView>
-      </View>
-    );
-  }
+export default function SearchResultScreen({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <SearchBar></SearchBar>
+      <ScrollView>
+        <ApartmentCard
+          onPress={() => navigation.navigate("ApartmentDetail")}
+        ></ApartmentCard>
+        <ApartmentCard
+          onPress={() => navigation.navigate("ApartmentDetail")}
+        ></ApartmentCard>
+        <ApartmentCard
+          onPress={() => navigation.navigate("ApartmentDetail")}
+        ></ApartmentCard>
+      </ScrollView>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({

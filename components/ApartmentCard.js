@@ -1,11 +1,17 @@
 import React from "react";
-import { StyleSheet, View, Image, Text } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Image,
+  Text,
+  TouchableHighlight
+} from "react-native";
 import { deviceHeight } from "../constants/Layout";
 import { Ionicons } from "@expo/vector-icons";
 
-export default class ApartmentCard extends React.Component {
-  render() {
-    return (
+export default function ApartmentCard({ onPress }) {
+  return (
+    <TouchableHighlight onPress={onPress}>
       <View style={styles.container}>
         <View style={styles.rowContainer}>
           <View style={styles.leftContainer}>
@@ -42,8 +48,8 @@ export default class ApartmentCard extends React.Component {
           </View>
         </View>
       </View>
-    );
-  }
+    </TouchableHighlight>
+  );
 }
 
 const styles = StyleSheet.create({
