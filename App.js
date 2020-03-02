@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import BottomTabNavigator from "./navigation/BottomTabNavigator";
 import SearchResultScreen from "./screens/SearchResultScreen";
+
 const Stack = createStackNavigator();
 
 export default function App() {
