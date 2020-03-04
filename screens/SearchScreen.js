@@ -15,13 +15,19 @@ export default class SearchScreen extends Component {
           <View style={styles.rowContainer}>
             <LocationCard
               label={"Manhattan"}
-              onPress={() => this.props.navigation.navigate("SearchResult")}
+              onPress={() =>
+                this.props.navigation.navigate("SearchResult", {
+                  mainAreaId: 1,
+                  mainArea: "Manhattan"
+                })
+              }
             />
             <LocationCard
               label={"Long Island City"}
               onPress={() =>
                 this.props.navigation.navigate("SearchResult", {
-                  mainAreaId: 2
+                  mainAreaId: 2,
+                  mainArea: "Long Island City"
                 })
               }
             />
@@ -29,21 +35,41 @@ export default class SearchScreen extends Component {
           <View style={styles.rowContainer}>
             <LocationCard
               label={"Brooklyn"}
-              onPress={() => this.props.navigation.navigate("SearchResult")}
+              onPress={() =>
+                this.props.navigation.navigate("SearchResult", {
+                  mainAreaId: 3,
+                  mainArea: "Brooklyn"
+                })
+              }
             />
             <LocationCard
               label={"Jersey City"}
-              onPress={() => this.props.navigation.navigate("SearchResult")}
+              onPress={() =>
+                this.props.navigation.navigate("SearchResult", {
+                  mainAreaId: 4,
+                  mainArea: "Jersey City"
+                })
+              }
             />
           </View>
           <View style={styles.rowContainer}>
             <LocationCard
               label={"Others"}
-              onPress={() => this.props.navigation.navigate("SearchResult")}
+              onPress={() =>
+                this.props.navigation.navigate("SearchResult", {
+                  mainAreaId: 5,
+                  mainArea: "Others"
+                })
+              }
             />
             <LocationCard
               label={"All"}
-              onPress={() => this.props.navigation.navigate("SearchResult")}
+              onPress={() =>
+                this.props.navigation.navigate("SearchResult", {
+                  mainAreaId: 0,
+                  mainArea: "All"
+                })
+              }
             />
           </View>
         </View>

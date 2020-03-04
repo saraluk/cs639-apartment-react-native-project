@@ -13,6 +13,7 @@ import ShareButton from "./ShareButton";
 
 export default class ApartmentCard extends Component {
   render() {
+    console.log(this);
     return (
       <TouchableHighlight
         underlayColor='transparent'
@@ -22,10 +23,8 @@ export default class ApartmentCard extends Component {
           <View style={styles.rowContainer}>
             <View style={styles.leftContainer}>
               <Image
-                style={styles.thumbnailImage}
-                source={{
-                  uri: "../assets/images/LIC_JacksonPark_photo_04.jpg"
-                }}
+                style={styles.thumbnailPhoto}
+                source={{ uri: this.props.thumbnailPhoto }}
               />
             </View>
             <View style={styles.rightContainer}>
@@ -78,11 +77,14 @@ const styles = StyleSheet.create({
     flex: 1
   },
   leftContainer: {
-    flex: 1.5
+    flex: 1.5,
+    overflow: "hidden",
+    padding: 0.5 * (deviceWidth / 20)
   },
-  thumbnailImage: {
-    height: 3 * (deviceHeight / 20),
-    width: 3 * (deviceHeight / 20)
+  thumbnailPhoto: {
+    flex: 1,
+    width: "100%",
+    borderRadius: 10
   },
   rightContainer: {
     flex: 2

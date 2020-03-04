@@ -7,18 +7,19 @@
       "subArea": "Long Island City",
       "apartmentName": "Jackson Park",
       "address": "2816 Jackson Ave, Long Island City, NY 11101",
-      "priceRange": "3,000 - 6,000",
+      "priceRange": "2,400 - 6,000",
       "roomTypes": "Studio | 1BR | 2BR",
       "phoneNumber": "718-736-2902",
+      "thumbnailPhoto": "https://codehs.com/uploads/758895df4e8611f845fc647fabd69ef7",
       "apartmentPhotos": [
-        "LIC_JacksonPark_photo_01.jpg",
-        "LIC_JacksonPark_photo_02.jpg",
-        "LIC_JacksonPark_photo_03.jpg",
-        "LIC_JacksonPark_photo_04.jpg",
-        "LIC_JacksonPark_photo_05.jpg",
-        "LIC_JacksonPark_photo_06.jpg",
-        "LIC_JacksonPark_photo_07.jpg",
-        "LIC_JacksonPark_photo_08.jpg"
+        "https://codehs.com/uploads/d51366c2b74eced3597c35b58e4fbff6",
+        "https://codehs.com/uploads/9723791e0d96d1e4e64a15e4ca0af3e0",
+        "https://codehs.com/uploads/711506d0d046cfb8f9e45e5b7ec1444f",
+        "https://codehs.com/uploads/758895df4e8611f845fc647fabd69ef7",
+        "https://codehs.com/uploads/709e802ca0d6e99c7791ab03f9716c98",
+        "https://codehs.com/uploads/2329dc4d485f70d6e64bb682076f0d70",
+        "https://codehs.com/uploads/ffcd4a4ac6970086ff29598c0ae18f89",
+        "https://codehs.com/uploads/b1acec4bb2f6676b9562e01c58cf49e5"
       ],
       "amenities": [
         "Sky Lounge and Party Room",
@@ -67,6 +68,53 @@
           "floorplan": "floorplan_LIC_JacksonPark_unit41R.jpg"
         }
       ],
+      "agentName": "",
+      "agentPhoneNumber": "",
+      "agentEmail": "",
+      "comments": [
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        }
+      ]
+    },
+    {
+      "id": "B01",
+      "mainArea": "Brooklyn",
+      "mainAreaId": 3,
+      "subArea": "Downtown Brooklyn",
+      "apartmentName": "The Eagle",
+      "address": "86 Fleet Pl, Brooklyn, NY 11201",
+      "priceRange": "2,500 - 5,500",
+      "roomTypes": "Studio | 1BR | 2BR",
+      "phoneNumber": "718-596-8181",
+      "thumbnailPhoto": "https://codehs.com/uploads/2d36233cfb51fe678f2ca1697b665dd9",
+      "apartmentPhotos": [],
+      "amenities": [
+        "24-hour concierge",
+        "Fully equiped 3,500 sf gym with yoga/dance/aerobics studio",
+        "Private party room",
+        "Residents’ lounge with fireplace, big screen TVs and billiard table",
+        "Business center",
+        "Barbeque and gardening plots",
+        "Penthouse sundeck with panoramic views of Manhattan and Brooklyn skylines",
+        "Indoor bicycle parking",
+        "Private dog run and pet play area",
+        "Private storage lockers"
+      ],
+      "studentMembers": ["NYU Tandon", "Pratt", "Pace"],
+      "availableFloorplans": [],
       "agentName": "",
       "agentPhoneNumber": "",
       "agentEmail": "",

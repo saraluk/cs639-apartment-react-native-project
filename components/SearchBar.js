@@ -30,7 +30,7 @@ export default class SearchBar extends Component {
         </View>
         <View style={styles.rowContainer}>
           <View style={styles.rowContainer}>
-            <Text style={styles.area}>Brooklyn</Text>
+            <Text style={styles.area}>{this.props.mainArea}</Text>
             <Text style={styles.results}>(15 Results)</Text>
           </View>
           <View>
