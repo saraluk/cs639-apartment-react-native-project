@@ -17,13 +17,19 @@ export default class SearchResultScreen extends Component {
   }
 
   render() {
+    const params = this.props.route.params;
+    const mainAreaId = params.mainAreaId;
+    const mainArea = params.mainArea;
+
     return (
       <View style={styles.container}>
-        <SearchBar></SearchBar>
+        <SearchBar mainArea={mainArea}></SearchBar>
         <ScrollView>
           {this.state.apartments.length > 0 &&
             this.state.apartments.map(apartment => (
               <ApartmentCard
+                key={apartment.id}
+                thumbnailPhoto={apartment.thumbnailPhoto}
                 apartmentName={apartment.apartmentName}
                 subArea={apartment.subArea}
                 priceRange={apartment.priceRange}
