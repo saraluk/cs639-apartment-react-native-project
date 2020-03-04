@@ -31,7 +31,7 @@ export default class SearchBar extends Component {
         <View style={styles.rowContainer}>
           <View style={styles.rowContainer}>
             <Text style={styles.area}>{this.props.mainArea}</Text>
-            <Text style={styles.results}>(15 Results)</Text>
+            <Text style={styles.results}>({this.props.results} Results)</Text>
           </View>
           <View>
             <Text style={styles.sortedby}>Sorted by</Text>
