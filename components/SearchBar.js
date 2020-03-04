@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
   },
   searchBarContainer: {
     flexDirection: "row",
+    alignItems: "center",
     width: 14 * (deviceWidth / 20),
     height: deviceHeight / 20,
     borderWidth: 2,
@@ -68,9 +69,9 @@ const styles = StyleSheet.create({
     height: deviceHeight / 20
   },
   searchIcon: {
-    color: "#a5c1d6",
-    fontSize: 28,
-    marginHorizontal: 5
+    color: "#dddddd",
+    fontSize: 0.5 * (deviceHeight / 20),
+    marginHorizontal: 0.3 * (deviceWidth / 20)
   },
   filterButton: {
     width: 4.5 * (deviceWidth / 20),
@@ -81,7 +82,8 @@ const styles = StyleSheet.create({
     borderRadius: 10
   },
   filterTextButton: {
-    color: "#ffffff"
+    color: "#ffffff",
+    fontSize: 0.5 * (deviceHeight / 20)
   },
   area: {
     fontSize: 0.4 * (deviceHeight / 20),

@@ -1,0 +1,92 @@
+{
+  "apartments": [
+    {
+      "id": "L01",
+      "mainArea": "Long Island City",
+      "mainAreaId": 2,
+      "subArea": "Long Island City",
+      "apartmentName": "Jackson Park",
+      "address": "2816 Jackson Ave, Long Island City, NY 11101",
+      "priceRange": "3,000 - 6,000",
+      "roomTypes": "Studio | 1BR | 2BR",
+      "phoneNumber": "718-736-2902",
+      "apartmentPhotos": [
+        "LIC_JacksonPark_photo_01.jpg",
+        "LIC_JacksonPark_photo_02.jpg",
+        "LIC_JacksonPark_photo_03.jpg",
+        "LIC_JacksonPark_photo_04.jpg",
+        "LIC_JacksonPark_photo_05.jpg",
+        "LIC_JacksonPark_photo_06.jpg",
+        "LIC_JacksonPark_photo_07.jpg",
+        "LIC_JacksonPark_photo_08.jpg"
+      ],
+      "amenities": [
+        "Sky Lounge and Party Room",
+        "Sky Terrace and Outdoor Lounge",
+        "Tech Lounge",
+        "Private Conference Room",
+        "Yoga and Group Fitness Studio",
+        "Steam Room and Sauna",
+        "75-foot Indoor Lap Pool",
+        "Outdoor Heated Pool",
+        "Full Size Indoor Basketball/ Volleyball Court",
+        "BBQ Grilling Stations"
+      ],
+      "studentMembers": [
+        "NYU",
+        "Fordham",
+        "NYIT",
+        "Yeshiva",
+        "SVA",
+        "FIT",
+        "TNS"
+      ],
+      "availableFloorplans": [
+        {
+          "roomType": "Studio",
+          "unitPrice": 3000,
+          "unit": "35J",
+          "floorplan": "floorplan_LIC_JacksonPark_unit35J.jpg"
+        },
+        {
+          "roomType": "1Bed 1Bath",
+          "unitPrice": 3500,
+          "unit": "28F",
+          "floorplan": "floorplan_LIC_JacksonPark_unit28F.jpg"
+        },
+        {
+          "roomType": "1Bed 1Bath",
+          "unitPrice": 4300,
+          "unit": "PH2-B",
+          "floorplan": "floorplan_LIC_JacksonPark_unitPH2-B.jpg"
+        },
+        {
+          "roomType": "2Bed 2Bath",
+          "unitPrice": 5000,
+          "unit": "41R",
+          "floorplan": "floorplan_LIC_JacksonPark_unit41R.jpg"
+        }
+      ],
+      "agentName": "",
+      "agentPhoneNumber": "",
+      "agentEmail": "",
+      "comments": [
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        }
+      ]
+    }
+  ]
+}
