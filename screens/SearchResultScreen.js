@@ -4,6 +4,7 @@ import SearchBar from "../components/SearchBar";
 import ApartmentCard from "../components/ApartmentCard";
 
 const data = require("../util/Data.json");
+
 export default class SearchResultScreen extends Component {
   state = {
     apartments: []
@@ -16,8 +17,6 @@ export default class SearchResultScreen extends Component {
   }
 
   render() {
-    // const param = this.props.navigation.state.params;
-    // const mainArea = param.mainAreaId;
     return (
       <View style={styles.container}>
         <SearchBar></SearchBar>
