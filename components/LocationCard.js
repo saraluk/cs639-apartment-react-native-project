@@ -1,16 +1,21 @@
-import React from "react";
+import React, { Component } from "react";
 import { View, Text, TouchableHighlight, StyleSheet } from "react-native";
 
 import { deviceHeight, deviceWidth } from "../constants/Layout";
 
-export default function LocationCard({ label, onPress }) {
-  return (
-    <TouchableHighlight onPress={onPress}>
-      <View style={styles.button}>
-        <Text style={styles.buttonText}>{label}</Text>
-      </View>
-    </TouchableHighlight>
-  );
+export default class LocationCard extends Component {
+  render() {
+    return (
+      <TouchableHighlight
+        underlayColor='transparent'
+        onPress={this.props.onPress}
+      >
+        <View style={styles.button}>
+          <Text style={styles.buttonText}>{this.props.label}</Text>
+        </View>
+      </TouchableHighlight>
+    );
+  }
 }
 
 const styles = StyleSheet.create({

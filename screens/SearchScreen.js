@@ -1,49 +1,55 @@
-import React from "react";
+import React, { Component } from "react";
 import { StyleSheet, View, Text } from "react-native";
 import { deviceHeight, deviceWidth } from "../constants/Layout";
 import LocationCard from "../components/LocationCard";
 
-export default function SearchScreen({ navigation }) {
-  return (
-    <View style={styles.container}>
-      <View style={styles.TitleTextContainer}>
-        <Text style={styles.TitleText}>Where</Text>
-        <Text style={styles.SubTitleText}>do you want to live ?</Text>
+export default class SearchScreen extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.TitleTextContainer}>
+          <Text style={styles.TitleText}>Where</Text>
+          <Text style={styles.SubTitleText}>do you want to live ?</Text>
+        </View>
+        <View style={styles.buttonContainer}>
+          <View style={styles.rowContainer}>
+            <LocationCard
+              label={"Manhattan"}
+              onPress={() => this.props.navigation.navigate("SearchResult")}
+            />
+            <LocationCard
+              label={"Long Island City"}
+              onPress={() =>
+                this.props.navigation.navigate("SearchResult", {
+                  mainAreaId: 2
+                })
+              }
+            />
+          </View>
+          <View style={styles.rowContainer}>
+            <LocationCard
+              label={"Brooklyn"}
+              onPress={() => this.props.navigation.navigate("SearchResult")}
+            />
+            <LocationCard
+              label={"Jersey City"}
+              onPress={() => this.props.navigation.navigate("SearchResult")}
+            />
+          </View>
+          <View style={styles.rowContainer}>
+            <LocationCard
+              label={"Others"}
+              onPress={() => this.props.navigation.navigate("SearchResult")}
+            />
+            <LocationCard
+              label={"All"}
+              onPress={() => this.props.navigation.navigate("SearchResult")}
+            />
+          </View>
+        </View>
       </View>
-      <View style={styles.buttonContainer}>
-        <View style={styles.rowContainer}>
-          <LocationCard
-            label={"Manhattan"}
-            onPress={() => navigation.navigate("SearchResult")}
-          />
-          <LocationCard
-            label={"Long Island City"}
-            onPress={() => navigation.navigate("SearchResult")}
-          />
-        </View>
-        <View style={styles.rowContainer}>
-          <LocationCard
-            label={"Brooklyn"}
-            onPress={() => navigation.navigate("SearchResult")}
-          />
-          <LocationCard
-            label={"Jersey City"}
-            onPress={() => navigation.navigate("SearchResult")}
-          />
-        </View>
-        <View style={styles.rowContainer}>
-          <LocationCard
-            label={"Others"}
-            onPress={() => navigation.navigate("SearchResult")}
-          />
-          <LocationCard
-            label={"All"}
-            onPress={() => navigation.navigate("SearchResult")}
-          />
-        </View>
-      </View>
-    </View>
-  );
+    );
+  }
 }
 
 SearchScreen.navigationOptions = {

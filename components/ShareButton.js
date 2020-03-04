@@ -3,13 +3,13 @@ import { View, Text, StyleSheet, TouchableHighlight } from "react-native";
 import { deviceHeight, deviceWidth } from "../constants/Layout";
 import { Ionicons } from "@expo/vector-icons";
 
-export default class SaveButton extends Component {
+export default class ShareButton extends Component {
   render() {
     return (
       <TouchableHighlight>
         <View style={styles.container}>
-          <Ionicons style={styles.icon} name='ios-bookmark' />
-          <Text>Save</Text>
+          <Ionicons style={styles.icon} name='ios-share' />
+          <Text>Share</Text>
         </View>
       </TouchableHighlight>
     );

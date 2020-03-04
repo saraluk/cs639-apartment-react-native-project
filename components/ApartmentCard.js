@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import {
   StyleSheet,
   View,
@@ -6,50 +6,62 @@ import {
   Text,
   TouchableHighlight
 } from "react-native";
-import { deviceHeight } from "../constants/Layout";
+import { deviceHeight, deviceWidth } from "../constants/Layout";
 import { Ionicons } from "@expo/vector-icons";
+import SaveButton from "./SaveButton";
+import ShareButton from "./ShareButton";
 
-export default function ApartmentCard({ onPress }) {
-  return (
-    <TouchableHighlight onPress={onPress}>
-      <View style={styles.container}>
-        <View style={styles.rowContainer}>
-          <View style={styles.leftContainer}>
-            <Image
-              style={styles.thumbnailImage}
-              source={{
-                uri: "../assets/images/LIC_JacksonPark_photo_04.jpg"
-              }}
-            />
-          </View>
-          <View style={styles.rightContainer}>
-            <View style={styles.apartmentName}>
-              <Text style={styles.title}>The Brooklyn Grove</Text>
+export default class ApartmentCard extends Component {
+  render() {
+    return (
+      <TouchableHighlight
+        underlayColor='transparent'
+        onPress={this.props.onPress}
+      >
+        <View style={styles.container}>
+          <View style={styles.rowContainer}>
+            <View style={styles.leftContainer}>
+              <Image
+                style={styles.thumbnailImage}
+                source={{
+                  uri: "../assets/images/LIC_JacksonPark_photo_04.jpg"
+                }}
+              />
             </View>
-            <View style={styles.apartmentSubArea}>
-              <View style={styles.rowContainer}>
-                <Ionicons style={styles.icon} name='ios-pin' />
-                <Text style={styles.subTitle}>Downtown Brooklyn</Text>
+            <View style={styles.rightContainer}>
+              <View style={styles.apartmentName}>
+                <Text style={styles.title}>{this.props.apartmentName}</Text>
+              </View>
+              <View style={styles.apartmentSubArea}>
+                <View style={styles.rowContainer}>
+                  <Ionicons style={styles.icon} name='ios-pin' />
+                  <Text style={styles.subTitle}>{this.props.subArea}</Text>
+                </View>
+              </View>
+              <View style={styles.apartmentPriceRange}>
+                <View style={styles.rowContainer}>
+                  <Ionicons style={styles.icon} name='md-cash' />
+                  <Text style={styles.subTitle}>{this.props.priceRange}</Text>
+                </View>
+              </View>
+              <View style={styles.apartmentRoomTypes}>
+                <View style={styles.rowContainer}>
+                  <Ionicons style={styles.icon} name='md-bed' />
+                  <Text style={styles.subTitle}>{this.props.roomTypes}</Text>
+                </View>
+              </View>
+              <View style={styles.buttonContainer}>
+                <View style={styles.rowContainer}>
+                  <SaveButton></SaveButton>
+                  <ShareButton></ShareButton>
+                </View>
               </View>
             </View>
-            <View style={styles.apartmentPriceRange}>
-              <View style={styles.rowContainer}>
-                <Ionicons style={styles.icon} name='md-cash' />
-                <Text style={styles.subTitle}>$3,000 - $6,000</Text>
-              </View>
-            </View>
-            <View style={styles.apartmentRoomTypes}>
-              <View style={styles.rowContainer}>
-                <Ionicons style={styles.icon} name='md-bed' />
-                <Text style={styles.subTitle}>Studio | 1BR | 2BR | 3BR</Text>
-              </View>
-            </View>
-            <View style={styles.buttonContainer}></View>
           </View>
         </View>
-      </View>
-    </TouchableHighlight>
-  );
+      </TouchableHighlight>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
@@ -59,10 +71,11 @@ const styles = StyleSheet.create({
     marginBottom: (0.5 * deviceHeight) / 20,
     backgroundColor: "#eaeaea",
     borderRadius: 10,
-    padding: 10
+    justifyContent: "center"
   },
   rowContainer: {
-    flexDirection: "row"
+    flexDirection: "row",
+    flex: 1
   },
   leftContainer: {
     flex: 1.5
@@ -75,7 +88,8 @@ const styles = StyleSheet.create({
     flex: 2
   },
   apartmentName: {
-    flex: 1.5
+    flex: 1.5,
+    justifyContent: "center"
   },
   apartmentSubArea: {
     flex: 1
@@ -87,10 +101,11 @@ const styles = StyleSheet.create({
     flex: 1
   },
   buttonContainer: {
-    flex: 1
+    flex: 1.5,
+    justifyContent: "center"
   },
   title: {
-    fontSize: 0.45 * (deviceHeight / 20),
+    fontSize: 0.4 * (deviceHeight / 20),
     fontWeight: "bold"
   },
   icon: {
