@@ -89,7 +89,6 @@
         }
       ]
     },
-
     {
       "id": "B01",
       "mainArea": "Brooklyn",
@@ -382,6 +381,264 @@
       "agentName": "Bordie Carmine",
       "agentPhoneNumber": "718-255-6933",
       "agentEmail": "bordie.c@gmail.com",
+      "comments": [
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        }
+      ]
+    },
+
+    {
+      "id": "J01",
+      "mainArea": "Jersey City",
+      "mainAreaId": 4,
+      "subArea": "Newport",
+      "apartmentName": "Aquablu",
+      "address": "110 River Dr S, Jersey City, NJ 07310",
+      "priceRange": "2,000 - 5,000",
+      "roomTypes": "Studio | 1BR | 2BR",
+      "phoneNumber": "844-388-6901",
+      "thumbnailPhoto": "https://codehs.com/uploads/8650a61801f600a77e14d0fee2bee69f",
+      "apartmentPhotos": [
+        "https://codehs.com/uploads/ad132516a5b874c3c121e72536fb6cc1",
+        "https://codehs.com/uploads/aee2e3d9642840bff9a77923e7191503",
+        "https://codehs.com/uploads/f707b72198de7b83e9ba97b7e521f00e",
+        "https://codehs.com/uploads/38903711eeffd8b4c7ad8f0fe7ba5d7d",
+        "https://codehs.com/uploads/49c1acbeeeb20776017632efe3d02e1a",
+        "https://codehs.com/uploads/8c49114e1a6b2d9d233db84245222201",
+        "https://codehs.com/uploads/42811bd2a7d6bfa7597a3d10933da50b"
+      ],
+      "amenities": [
+        "Newly renovated roofdeck",
+        "Brand new Skylounge",
+        "Fitness Center",
+        "24-hour doorman and concierge",
+        "Package receiving with email notification",
+        "Pet-friendly community",
+        "Steps to Newport Green Park",
+        "Garage parking available"
+      ],
+      "studentMembers": [
+        "NYU",
+        "Pace University",
+        "Pratt (Midtown)",
+        "SVA",
+        "FIT",
+        "TNS"
+      ],
+      "availableFloorplans": [
+        {
+          "roomType": "Studio",
+          "unitPrice": 2495,
+          "unit": "305",
+          "floorplan": "https://codehs.com/uploads/97c34b8529a4ee48f46311dfa470af0f"
+        },
+        {
+          "roomType": "1Bed 1Bath",
+          "unitPrice": 2745,
+          "unit": "516",
+          "floorplan": "https://codehs.com/uploads/22ddf8eb9cdb38d5d228ac93a0d1bf84"
+        },
+        {
+          "roomType": "1Bed 1Bath",
+          "unitPrice": 3195,
+          "unit": "2901",
+          "floorplan": "https://codehs.com/uploads/05d10b64460aeee07ee66e67e04b9b51"
+        },
+        {
+          "roomType": "2Bed 2Bath",
+          "unitPrice": 3905,
+          "unit": "429",
+          "floorplan": "https://codehs.com/uploads/ac932b7f58b4b1506795d40686736306"
+        }
+      ],
+      "agentName": "Andy Yang",
+      "agentPhoneNumber": "123-456-7890",
+      "agentEmail": "andy.yang@agent.com",
+      "comments": [
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        }
+      ]
+    },
+    {
+      "id": "J02",
+      "mainArea": "Jersey City",
+      "mainAreaId": 4,
+      "subArea": "Newport",
+      "apartmentName": "Monaco",
+      "address": "475 Washington Blvd, Jersey City, NJ 07310",
+      "priceRange": "2,000 - 5,000",
+      "roomTypes": "Studio | 1BR | 2BR",
+      "phoneNumber": "201-239-9600",
+      "thumbnailPhoto": "https://codehs.com/uploads/cf48d15c5b384d209c5535b1f0dc9443",
+      "apartmentPhotos": [
+        "https://codehs.com/uploads/3e5a1697faf963705bf6b82b31ee958c",
+        "https://codehs.com/uploads/6f2c0479a5a9b28e879507b012ebe6ef",
+        "https://codehs.com/uploads/17cf057797d1ec0203423d9ef6e03eca",
+        "https://codehs.com/uploads/f722d16ff2773c10d94d491faba5480f",
+        "https://codehs.com/uploads/6c91925b4800e78e31ce927a0488044b",
+        "https://codehs.com/uploads/4f38b26cbf4dc88a7a2a8864bbe7bb46",
+        "https://codehs.com/uploads/f8f031c24edc8c30b4076f8f6c4db0d0"
+      ],
+      "amenities": [
+        "24-hour concierge service",
+        "Heated outdoor pool, whirlpool spa and lounge pool",
+        "Health & fitness center",
+        "Wi-Fi in all common areas",
+        "Sundeck with fireside seating",
+        "Community greenscape with outdoor seating",
+        "Dog run and washing station",
+        "Covered parking garage",
+        "Lobby area with fireplaces",
+        "Convenient to PATH & NY Waterway"
+      ],
+      "studentMembers": [
+        "NYU",
+        "Pace University",
+        "Pratt (Midtown)",
+        "SVA",
+        "FIT",
+        "TNS"
+      ],
+      "availableFloorplans": [
+        {
+          "roomType": "Studio",
+          "unitPrice": 3170,
+          "unit": "4604S",
+          "floorplan": "https://codehs.com/uploads/780fbe9a04dc3dc0598ccb7bd8d70cf8"
+        },
+        {
+          "roomType": "1Bed 1Bath",
+          "unitPrice": 3225,
+          "unit": "2103N",
+          "floorplan": "https://codehs.com/uploads/bc03dc3d7d63927fbbbbc74abdf5eff6"
+        },
+        {
+          "roomType": "1Bed 1Bath",
+          "unitPrice": 3394,
+          "unit": "3402N",
+          "floorplan": "https://codehs.com/uploads/ad5aabf34690a5debb269b4350b7a8af"
+        },
+        {
+          "roomType": "2Bed 2Bath",
+          "unitPrice": 4152,
+          "unit": "3703N",
+          "floorplan": "https://codehs.com/uploads/2b44cb5e37b34ecbc9535228b72cf5da"
+        }
+      ],
+      "agentName": "Andy Yang",
+      "agentPhoneNumber": "123-456-7890",
+      "agentEmail": "andy.yang@agent.com",
+      "comments": [
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        }
+      ]
+    },
+    {
+      "id": "J03",
+      "mainArea": "Jersey City",
+      "mainAreaId": 4,
+      "subArea": "Newport",
+      "apartmentName": "Ellipse",
+      "address": "25 Park Ln S, Jersey City, NJ 07310",
+      "priceRange": "2,000 - 5,000",
+      "roomTypes": "Studio | 1BR | 2BR",
+      "phoneNumber": "844-597-5541",
+      "thumbnailPhoto": "https://codehs.com/uploads/97c7f52349d07a84a1d6eba630b217dc",
+      "apartmentPhotos": [
+        "https://codehs.com/uploads/b33cbcdd7535e6e176b32c9d5fc6a8e6",
+        "https://codehs.com/uploads/d3d4e1d244a822ab4d97694092479698",
+        "https://codehs.com/uploads/0b733eb2d1c52476b31e00961afef60a",
+        "https://codehs.com/uploads/b62edb537e354d32d9c305a90172dc05",
+        "https://codehs.com/uploads/be78b09b1a5e6ee1447dbcf90a554723",
+        "https://codehs.com/uploads/63e39cfb35aa7b35a8440113b5f3cefa",
+        "https://codehs.com/uploads/875b4f1b6e39fa1297c35dfe0b2a9a4a"
+      ],
+      "amenities": [
+        "Outdoor Pool and Roof Deck",
+        "Fitness Center",
+        "Training Studio",
+        "Resident Lounge",
+        "Co-working Space",
+        "24-Hour Doorman",
+        "Children's Playroom",
+        "Onsite garage parking available"
+      ],
+      "studentMembers": [
+        "NYU",
+        "Pace University",
+        "Pratt (Midtown)",
+        "SVA",
+        "FIT",
+        "TNS"
+      ],
+      "availableFloorplans": [
+        {
+          "roomType": "Studio",
+          "unitPrice": 2913,
+          "unit": "2607",
+          "floorplan": "https://codehs.com/uploads/07ca31d2de5f7c4ff20ce7aaa0d3a76c"
+        },
+        {
+          "roomType": "1Bed 1Bath",
+          "unitPrice": 3456,
+          "unit": "2306",
+          "floorplan": "https://codehs.com/uploads/e7da7965744c112c9d4492be8c1ae58f"
+        },
+        {
+          "roomType": "1Bed 1Bath",
+          "unitPrice": 3627,
+          "unit": "1103",
+          "floorplan": "https://codehs.com/uploads/94df42c88f4d56048f640086e858d35c"
+        },
+        {
+          "roomType": "2Bed 2Bath",
+          "unitPrice": 4839,
+          "unit": "2304",
+          "floorplan": "https://codehs.com/uploads/82d22fdb3d45677db943cbd9ffb4ec87"
+        }
+      ],
+      "agentName": "Andy Yang",
+      "agentPhoneNumber": "123-456-7890",
+      "agentEmail": "andy.yang@agent.com",
       "comments": [
         {
           "username": "",
