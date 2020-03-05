@@ -6,12 +6,13 @@ import ShareButton from "../components/ShareButton.js";
 import HorizontalLine from "./HorizontalLine.js";
 import AmenitiesList from "./AmenitiesList.js";
 import SectionHeader from "./SectionHeader.js";
+import PhotosSlider from "./PhotosSlider.js";
 
 export default class ApartmentDetail extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.photoSliderContainer}></View>
+        <PhotosSlider photos={this.props.apartmentPhotos}></PhotosSlider>
         <View style={styles.buttonContainer}>
           <SaveButton></SaveButton>
           <ShareButton></ShareButton>
@@ -36,11 +37,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#ffffff"
-  },
-  photoSliderContainer: {
-    height: 8 * (deviceHeight / 20),
-    width: deviceWidth,
-    backgroundColor: "#a5c1d6"
   },
   buttonContainer: {
     flexDirection: "row",

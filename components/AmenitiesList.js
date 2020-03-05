@@ -9,20 +9,32 @@ export default class AmenitiesList extends Component {
   };
 
   render() {
+    const newArr = [...this.state.amenities];
+
+    let rightArr = newArr;
+    let leftArr = newArr.splice(0, Math.ceil(newArr.length / 2));
+
     return (
       <View style={styles.container}>
-        {this.state.amenities.map(amenity => (
-          <View style={styles.rowContainer}>
-            <View style={styles.leftContainer}>
-              <Ionicons style={styles.icon} name='md-arrow-dropright' />
-              <Text style={styles.text}>{amenity}</Text>
-            </View>
-            <View style={styles.middleContainer}></View>
-            <View style={styles.rightContainer}>
-              <Text style={styles.text}></Text>
-            </View>
+        <View style={styles.rowContainer}>
+          <View style={styles.leftContainer}>
+            {leftArr.map(amenity => (
+              <View style={styles.list}>
+                <Ionicons style={styles.icon} name='md-arrow-dropright' />
+                <Text style={styles.text}>{amenity}</Text>
+              </View>
+            ))}
           </View>
-        ))}
+          <View style={styles.middleContainer}></View>
+          <View style={styles.rightContainer}>
+            {rightArr.map(amenity => (
+              <View style={styles.list}>
+                <Ionicons style={styles.icon} name='md-arrow-dropright' />
+                <Text style={styles.text}>{amenity}</Text>
+              </View>
+            ))}
+          </View>
+        </View>
       </View>
     );
   }
@@ -38,8 +50,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between"
   },
   leftContainer: {
-    flex: 1,
-    flexDirection: "row"
+    flex: 1
     // borderColor: "black",
     // borderWidth: 1
   },
@@ -47,10 +58,12 @@ const styles = StyleSheet.create({
     flex: 0.2
   },
   rightContainer: {
-    flex: 1,
-    flexDirection: "row"
+    flex: 1
     // borderColor: "black",
     // borderWidth: 1
+  },
+  list: {
+    flexDirection: "row"
   },
   icon: {
     fontSize: 0.4 * (deviceHeight / 20),

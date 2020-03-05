@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
   container: {
     height: 0.05 * (deviceHeight / 20),
     backgroundColor: "#ef4923",
-    marginVertical: 0.15 * (deviceHeight / 20)
+    marginTop: 0.2 * (deviceHeight / 20),
+    marginBottom: 0.35 * (deviceHeight / 20)
   }
 });

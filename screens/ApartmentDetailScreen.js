@@ -36,6 +36,7 @@ export default class ApartmentDetailScreen extends Component {
                 apartmentName={apartment.apartmentName}
                 address={apartment.address}
                 amenities={apartment.amenities}
+                apartmentPhotos={apartment.apartmentPhotos}
               ></ApartmentDetail>
             ))}
         </ScrollView>

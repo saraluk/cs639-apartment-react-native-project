@@ -13,9 +13,11 @@ export default class SectionHeader extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    marginBottom: 0.2 * (deviceHeight / 20)
+  },
   text: {
-    fontSize: 0.5 * (deviceHeight / 20),
+    fontSize: 0.45 * (deviceHeight / 20),
     fontWeight: "bold",
     color: "#4a6e99"
   }
