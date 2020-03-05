@@ -12,10 +12,10 @@
       "phoneNumber": "718-736-2902",
       "thumbnailPhoto": "https://codehs.com/uploads/758895df4e8611f845fc647fabd69ef7",
       "apartmentPhotos": [
+        "https://codehs.com/uploads/758895df4e8611f845fc647fabd69ef7",
         "https://codehs.com/uploads/d51366c2b74eced3597c35b58e4fbff6",
         "https://codehs.com/uploads/9723791e0d96d1e4e64a15e4ca0af3e0",
         "https://codehs.com/uploads/711506d0d046cfb8f9e45e5b7ec1444f",
-        "https://codehs.com/uploads/758895df4e8611f845fc647fabd69ef7",
         "https://codehs.com/uploads/709e802ca0d6e99c7791ab03f9716c98",
         "https://codehs.com/uploads/2329dc4d485f70d6e64bb682076f0d70",
         "https://codehs.com/uploads/ffcd4a4ac6970086ff29598c0ae18f89",
@@ -47,25 +47,25 @@
           "roomType": "Studio",
           "unitPrice": 3000,
           "unit": "35J",
-          "floorplan": "floorplan_LIC_JacksonPark_unit35J.jpg"
+          "floorplan": "https://codehs.com/uploads/ddc857dae5d0173d9f6b8c64b35b589f"
         },
         {
           "roomType": "1Bed 1Bath",
           "unitPrice": 3500,
           "unit": "28F",
-          "floorplan": "floorplan_LIC_JacksonPark_unit28F.jpg"
+          "floorplan": "https://codehs.com/uploads/6241a9d67f31ad5dd5f426f99211b1bc"
         },
         {
           "roomType": "1Bed 1Bath",
           "unitPrice": 4300,
           "unit": "PH2-B",
-          "floorplan": "floorplan_LIC_JacksonPark_unitPH2-B.jpg"
+          "floorplan": "https://codehs.com/uploads/1acd373598a0a7ebc51217555a60fb8a"
         },
         {
           "roomType": "2Bed 2Bath",
           "unitPrice": 5000,
           "unit": "41R",
-          "floorplan": "floorplan_LIC_JacksonPark_unit41R.jpg"
+          "floorplan": "https://codehs.com/uploads/3675fe3a1023355278ccb245e5fa5ccd"
         }
       ],
       "agentName": "",
@@ -89,6 +89,7 @@
         }
       ]
     },
+
     {
       "id": "B01",
       "mainArea": "Brooklyn",
@@ -97,27 +98,290 @@
       "apartmentName": "The Eagle",
       "address": "86 Fleet Pl, Brooklyn, NY 11201",
       "priceRange": "2,500 - 5,500",
-      "roomTypes": "Studio | 1BR | 2BR",
+      "roomTypes": "Studio | 1BR | 2BR | 3BR",
       "phoneNumber": "718-596-8181",
       "thumbnailPhoto": "https://codehs.com/uploads/2d36233cfb51fe678f2ca1697b665dd9",
-      "apartmentPhotos": [],
+      "apartmentPhotos": [
+        "https://codehs.com/uploads/2d36233cfb51fe678f2ca1697b665dd9",
+        "https://codehs.com/uploads/2523de9846dbe5ae4700c6d5b4564a59",
+        "https://codehs.com/uploads/f43397974f0389e221a47c12ebbf136f",
+        "https://codehs.com/uploads/d7544328fa8ab82210134da7eaf849e1",
+        "https://codehs.com/uploads/22f2a50c68d34063a4704321f66c24ec",
+        "https://codehs.com/uploads/ff2c87b26428e14b06817d4d0cbdb593",
+        "https://codehs.com/uploads/30d28b152fbd3aa23541f764f47a2388",
+        "https://codehs.com/uploads/7f4e8e45d94b06f04801b63a8ad46326"
+      ],
       "amenities": [
         "24-hour concierge",
         "Fully equiped 3,500 sf gym with yoga/dance/aerobics studio",
         "Private party room",
-        "Residents’ lounge with fireplace, big screen TVs and billiard table",
         "Business center",
         "Barbeque and gardening plots",
-        "Penthouse sundeck with panoramic views of Manhattan and Brooklyn skylines",
+        "Penthouse sundeck with panoramic views",
+        "Residents’ lounge with fireplace, big screen TVs and billiard table",
         "Indoor bicycle parking",
-        "Private dog run and pet play area",
         "Private storage lockers"
       ],
       "studentMembers": ["NYU Tandon", "Pratt", "Pace"],
-      "availableFloorplans": [],
-      "agentName": "",
-      "agentPhoneNumber": "",
-      "agentEmail": "",
+      "availableFloorplans": [
+        {
+          "roomType": "Studio",
+          "unitPrice": 2858,
+          "unit": "21N",
+          "floorplan": "https://codehs.com/uploads/d53438586cf6ff9d906a9372f2ec336a"
+        },
+        {
+          "roomType": "Studio",
+          "unitPrice": 3000,
+          "unit": "25C",
+          "floorplan": "https://codehs.com/uploads/9bc0f20e888cdcddd7f762cf9e28ad74"
+        },
+        {
+          "roomType": "Studio",
+          "unitPrice": 2792,
+          "unit": "4F",
+          "floorplan": "https://codehs.com/uploads/87ac43a7b5e33e8fd41f62632859531f"
+        }
+      ],
+      "agentName": "Paul Delan",
+      "agentPhoneNumber": "347-490-5829",
+      "agentEmail": "pauldelan@gmail.com",
+      "comments": [
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        }
+      ]
+    },
+    {
+      "id": "B02",
+      "mainArea": "Brooklyn",
+      "mainAreaId": 3,
+      "subArea": "Downtown Brooklyn",
+      "apartmentName": "Hub Bk",
+      "address": "333 Schermerhorn St. Brooklyn, NY 11217",
+      "priceRange": "2,900 - 6,600",
+      "roomTypes": "Studio | 1BR | 2BR",
+      "phoneNumber": "718-330-3330",
+      "thumbnailPhoto": "https://codehs.com/uploads/f6f69204b51139ba61ebf7c5e3d3703f",
+      "apartmentPhotos": [
+        "https://codehs.com/uploads/f6f69204b51139ba61ebf7c5e3d3703f",
+        "https://codehs.com/uploads/2a720677306780cd2b8c66b621afd515",
+        "https://codehs.com/uploads/9402036fc1e8ca9bf0e3652408f269b0",
+        "https://codehs.com/uploads/484e81d2ebdba70ce39f217b5ed47637",
+        "https://codehs.com/uploads/bf30604a2eb83e37e361c6d2834eba1c",
+        "https://codehs.com/uploads/b1c4f8b5d3ff634591db7eeadc581250",
+        "https://codehs.com/uploads/8dd488e5fb628742eda9b2a37653c3bb",
+        "https://codehs.com/uploads/f48c139a7df63b73838cfa75e03ef6ad",
+        "https://codehs.com/uploads/32923e342d771cd737ad87fa3379ab0e"
+      ],
+      "amenities": [
+        "75' long pool",
+        "Grill Cabanas",
+        "Huge landscaped terrace",
+        "Club lounge",
+        "Party rooms and screenings",
+        "Fitness center",
+        "Conference center",
+        "Bike storage",
+        "Play room",
+        "Sky lounge"
+      ],
+      "studentMembers": ["NYU", "LIU", "Pace", "Baruch"],
+      "availableFloorplans": [
+        {
+          "roomType": "Studio",
+          "unitPrice": 2928,
+          "unit": "24S",
+          "floorplan": "https://codehs.com/uploads/85395aa47b0de1f9e3f9817ba46ff6a3"
+        },
+        {
+          "roomType": "1Bed 1Bath",
+          "unitPrice": 3628,
+          "unit": "32L",
+          "floorplan": "https://codehs.com/uploads/e074ab960cf7fa2323fd9966523b6394"
+        },
+        {
+          "roomType": "2Bed 2Bath",
+          "unitPrice": 6600,
+          "unit": "PH54L",
+          "floorplan": "https://codehs.com/uploads/9e488581bddbb5124fd876a6ea67993e"
+        }
+      ],
+      "agentName": "Stephen Macwell",
+      "agentPhoneNumber": "646-555-6782",
+      "agentEmail": "stephen.m@gmail.com",
+      "comments": [
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        }
+      ]
+    },
+    {
+      "id": "B03",
+      "mainArea": "Brooklyn",
+      "mainAreaId": 3,
+      "subArea": "Gowanus",
+      "apartmentName": "365 Bond",
+      "address": "365 Bond St. Brooklyn, NY 11231",
+      "priceRange": "2,700 - 6,000",
+      "roomTypes": "Studio | 1BR | 2BR",
+      "phoneNumber": "718-BOND-365",
+      "thumbnailPhoto": "https://codehs.com/uploads/dc674bf9c14a497b2d3383e75edc8ef9",
+      "apartmentPhotos": [
+        "https://codehs.com/uploads/dc674bf9c14a497b2d3383e75edc8ef9",
+        "https://codehs.com/uploads/3616ba346886188472ad8fcc8732e917",
+        "https://codehs.com/uploads/83d744594a42421b43de648b1e782d79",
+        "https://codehs.com/uploads/cfe5d46c55313f2d1f2b2d851bed89ad",
+        "https://codehs.com/uploads/dcad8082dec85af5fb82a8c996511c99",
+        "https://codehs.com/uploads/57faf1d0967b036bba49331f7f6f6832",
+        "https://codehs.com/uploads/e83ebc67dec698df27e583f813bf8979",
+        "https://codehs.com/uploads/b8c64bdfbf27e3747dfb1be3f983ca3b",
+        "https://codehs.com/uploads/0bf615aa96dcedb0c91e144e8f986c5b"
+      ],
+      "amenities": [
+        "24 hour attended lobby concierge",
+        "Tranquil interior garden courtyard",
+        "Rooftop lounges with barbecues",
+        "Rooftop sun terrace",
+        "Game Room",
+        "Staffed state of the art fitness facilities",
+        "Yoga room and spin studios",
+        "Library and Club room with fireplaces",
+        "Residents lounge",
+        "Gourmet catering kitchen with private dining",
+        "On-site tenant storage and bike storage"
+      ],
+      "studentMembers": ["NYU", "Pace", "Pratt"],
+      "availableFloorplans": [
+        {
+          "roomType": "Studio",
+          "unitPrice": 2695,
+          "unit": "B212",
+          "floorplan": "https://codehs.com/uploads/17ccd705bb9ff376874cb0c31ef4959a"
+        },
+        {
+          "roomType": "Studio",
+          "unitPrice": 2933,
+          "unit": "B201",
+          "floorplan": "https://codehs.com/uploads/e63a740a921a85730d81c95b590c96cb"
+        },
+        {
+          "roomType": "2Bed 2.5Bath",
+          "unitPrice": 5953,
+          "unit": "C122",
+          "floorplan": "https://codehs.com/uploads/db31d5fff87e451f410a2f92047eefe3"
+        }
+      ],
+      "agentName": "Marina Barney",
+      "agentPhoneNumber": "718-428-0909",
+      "agentEmail": "marina.barney@gmail.com",
+      "comments": [
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        }
+      ]
+    },
+    {
+      "id": "B04",
+      "mainArea": "Brooklyn",
+      "mainAreaId": 3,
+      "subArea": "Clinton Hill",
+      "apartmentName": "475 Clermont",
+      "address": "475 Clermont, Brooklyn, NY 11238",
+      "priceRange": "3,500 - 5,600",
+      "roomTypes": "Studio | 1BR | 2BR",
+      "phoneNumber": "917-946-0839",
+      "thumbnailPhoto": "https://codehs.com/uploads/51a0622d84ae8785d96a08c9d6fad9ff",
+      "apartmentPhotos": [
+        "https://codehs.com/uploads/51a0622d84ae8785d96a08c9d6fad9ff",
+        "https://codehs.com/uploads/4b6d0ee6f6c06c32468d2940837c9cb3",
+        "https://codehs.com/uploads/dbd5c369a0ec29e871355eb9b59a9dca",
+        "https://codehs.com/uploads/005ebb94e4b02ac807a87fe00907946a",
+        "https://codehs.com/uploads/4ef6d3e13380c5384b48a4783ba2d447",
+        "https://codehs.com/uploads/07bf34d320d34994034a11d5a7ae402c",
+        "https://codehs.com/uploads/f7ee38f494789f6988f2f6cca2d48424",
+        "https://codehs.com/uploads/4606d927f44febbd397d8a17474bf70c",
+        "https://codehs.com/uploads/0d6415a3f083aa965fa2f90ff455073b"
+      ],
+      "amenities": [
+        "24-hour Concierge",
+        "Fitness Center & Yoga Studio",
+        "Lounge and Game Room",
+        "Business Center",
+        "Outdoor Fitness Deck",
+        "Movie Screen",
+        "Grilling Stations and Dining Areas",
+        "Pet Spa",
+        "Common Laundry Room",
+        "Bicycle Storage",
+        "Valet Parking"
+      ],
+      "studentMembers": ["NYU", "Baruch", "LIU", "Fordham"],
+      "availableFloorplans": [
+        {
+          "roomType": "Studio",
+          "unitPrice": 3498,
+          "unit": "1010",
+          "floorplan": "https://codehs.com/uploads/6ed6c9f02a08f55e9b6df84d5ebc6a26"
+        },
+        {
+          "roomType": "1Bed 1Bath",
+          "unitPrice": 3895,
+          "unit": "1004",
+          "floorplan": "https://codehs.com/uploads/58532ad9b7e03f597c9cf738ac3525ad"
+        },
+        {
+          "roomType": "1Bed 1Bath",
+          "unitPrice": 4177,
+          "unit": "1007",
+          "floorplan": "https://codehs.com/uploads/23de567c6f2923bb3307945f9878ef5f"
+        },
+        {
+          "roomType": "2Bed 2Bath",
+          "unitPrice": 5534,
+          "unit": "1038",
+          "floorplan": "https://codehs.com/uploads/0685c2fa52bd24d2e7179126f22edc60"
+        }
+      ],
+      "agentName": "Bordie Carmine",
+      "agentPhoneNumber": "718-255-6933",
+      "agentEmail": "bordie.c@gmail.com",
       "comments": [
         {
           "username": "",

@@ -20,13 +20,17 @@ export default class SearchResultScreen extends Component {
     const params = this.props.route.params;
     const mainAreaId = params.mainAreaId;
     const mainArea = params.mainArea;
+    let filtered = this.state.apartments.filter(apartment => {
+      return apartment.mainAreaId == mainAreaId;
+    });
+    console.log(filtered);
 
     return (
       <View style={styles.container}>
-        <SearchBar mainArea={mainArea}></SearchBar>
+        <SearchBar mainArea={mainArea} results={filtered.length}></SearchBar>
         <ScrollView>
-          {this.state.apartments.length > 0 &&
-            this.state.apartments.map(apartment => (
+          {filtered.length > 0 &&
+            filtered.map(apartment => (
               <ApartmentCard
                 key={apartment.id}
                 thumbnailPhoto={apartment.thumbnailPhoto}
@@ -35,7 +39,9 @@ export default class SearchResultScreen extends Component {
                 priceRange={apartment.priceRange}
                 roomTypes={apartment.roomTypes}
                 onPress={() =>
-                  this.props.navigation.navigate("ApartmentDetail")
+                  this.props.navigation.navigate("ApartmentDetail", {
+                    key: apartment.id
+                  })
                 }
               ></ApartmentCard>
             ))}
