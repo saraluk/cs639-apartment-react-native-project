@@ -1,42 +1,40 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, ScrollView } from "react-native";
-import { deviceHeight, deviceWidth } from "../constants/Layout.js";
-import SaveButton from "../components/SaveButton.js";
-import ShareButton from "../components/ShareButton.js";
+import { StyleSheet, View, ScrollView } from "react-native";
 import ApartmentDetail from "../components/ApartmentDetail.js";
 
 const data = require("../util/Data.json");
 
 export default class ApartmentDetailScreen extends Component {
   state = {
-    apartments: []
+    apartments: data.apartments,
+    filteredList: []
   };
 
   componentDidMount() {
-    this.setState({
-      apartments: data.apartments
-    });
-  }
-
-  render() {
     const params = this.props.route.params;
     const id = params.key;
     let filtered = this.state.apartments.filter(apartment => {
       return apartment.id == id;
     });
-
     console.log(filtered);
+    this.setState({
+      filteredList: filtered
+    });
+  }
+
+  render() {
     return (
       <View style={styles.container}>
         <ScrollView>
-          {filtered.length > 0 &&
-            filtered.map(apartment => (
+          {this.state.filteredList.length > 0 &&
+            this.state.filteredList.map(apartment => (
               <ApartmentDetail
                 key={apartment.id}
                 apartmentName={apartment.apartmentName}
                 address={apartment.address}
                 amenities={apartment.amenities}
                 apartmentPhotos={apartment.apartmentPhotos}
+                availableFloorplans={apartment.availableFloorplans}
               ></ApartmentDetail>
             ))}
         </ScrollView>

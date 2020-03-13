@@ -280,13 +280,13 @@
           "roomType": "Studio",
           "unitPrice": 2695,
           "unit": "B212",
-          "floorplan": "https://codehs.com/uploads/17ccd705bb9ff376874cb0c31ef4959a"
+          "floorplan": "https://codehs.com/uploads/b5675cc901e7643a70d4d5f146e288d5"
         },
         {
           "roomType": "Studio",
           "unitPrice": 2933,
           "unit": "B201",
-          "floorplan": "https://codehs.com/uploads/e63a740a921a85730d81c95b590c96cb"
+          "floorplan": "https://codehs.com/uploads/b175341a4bcdcfe7a033d5df34684974"
         },
         {
           "roomType": "2Bed 2.5Bath",
@@ -639,6 +639,205 @@
       "agentName": "Andy Yang",
       "agentPhoneNumber": "123-456-7890",
       "agentEmail": "andy.yang@agent.com",
+      "comments": [
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        }
+      ]
+    },
+    {
+      "id": "M01",
+      "mainArea": "Manhattan",
+      "mainAreaId": 1,
+      "subArea": "Uptown Manhattan",
+      "apartmentName": "Park West Village",
+      "address": "792 COLUMBUS AVENUE, SUITE 1E, NEW YORK, NY 10025",
+      "priceRange": "3000 - 6,600",
+      "roomTypes": "Studio | 1BR | 2BR",
+      "phoneNumber": "212-865-8080",
+      "thumbnailPhoto": "https://codehs.com/uploads/55247a204bf63bb43508d8db47bb3896",
+      "apartmentPhotos": [
+        "https://codehs.com/uploads/1b4183483ad09ec581346da39f9eb5f1",
+        "https://codehs.com/uploads/02ee326d0fe1021fa57bff9cbcefafcf",
+        "https://codehs.com/uploads/555f89e9ac329d3bda7184a6d0a44c57",
+        "https://codehs.com/uploads/33ae466c882b6d8d1875892289310c26",
+        "https://codehs.com/uploads/1c9b8e3f6a007e7bf97d4a3e8363242c",
+        "https://codehs.com/uploads/02ed855f164c609d5d534e6d60525f37",
+        "https://codehs.com/uploads/aa81e6a2a91815ac9d36fa1e012e84fa",
+        "https://codehs.com/uploads/02b81f1cef1e40682de407b29fa25f0f"
+      ],
+      "amenities": ["Children’s Playground", "Fully equipped gym", "Dog Run"],
+      "studentMembers": ["Columbia", "Fordham", "NYIT"],
+      "availableFloorplans": [
+        {
+          "roomType": "Studio",
+          "unitPrice": 3095,
+          "unit": "F 589 SF",
+          "floorplan": "https://codehs.com/uploads/28adeed565cb01558cd24bae3f9f8bcb"
+        },
+        {
+          "roomType": "1B1B",
+          "unitPrice": 3650,
+          "unit": "K 666 SF",
+          "floorplan": "https://codehs.com/uploads/6e8eb90839bc5d86e0130568535d251d"
+        },
+        {
+          "roomType": "2B2B",
+          "unitPrice": 5395,
+          "unit": "950 SF",
+          "floorplan": "https://codehs.com/uploads/68fe2010f72240931432ad729543999f"
+        }
+      ],
+      "agentName": "Smith Zoe",
+      "agentPhoneNumber": "347-788-1244",
+      "agentEmail": "smith@gmail.com",
+      "comments": [
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        }
+      ]
+    },
+    {
+      "id": "M02",
+      "mainArea": "Manhattan",
+      "mainAreaId": 1,
+      "subArea": "Midtown Manhattan",
+      "apartmentName": "MiMA",
+      "address": "450 West 42nd Street,NY 10036",
+      "priceRange": "3500 - 6,600",
+      "roomTypes": "Studio | 1BR | 2BR",
+      "phoneNumber": "646-666-3715",
+      "thumbnailPhoto": "https://codehs.com/uploads/db2158458363df4d0ba79c16610d7566",
+      "apartmentPhotos": [
+        "https://codehs.com/uploads/e13bed6d97f7971ac771309a995641fa",
+        "https://codehs.com/uploads/f1677e5f16d46eb65e6d7d6cd5fe1835",
+        "https://codehs.com/uploads/3c99101687e443323f2b025e0e285cb9",
+        "https://codehs.com/uploads/450e28c4f12892465b8e1f363a8e6b09",
+        "https://codehs.com/uploads/f5ebda81eb691c857b6c433b432ea57a"
+      ],
+      "amenities": [
+        "Heated swimming pool",
+        "Fully equipped gym",
+        "Dog City",
+        "Basketball court",
+        "Brand new golf simulator",
+        "BBQ grills and outdoor seating areas",
+        "Children’s playroom"
+      ],
+      "studentMembers": ["NYU", "SVA", "Parsons"],
+      "availableFloorplans": [
+        {
+          "roomType": "Studio",
+          "unitPrice": 3875,
+          "unit": "H 9-38",
+          "floorplan": "https://codehs.com/uploads/b47662a8eec50246e2657a1f177582a7"
+        },
+        {
+          "roomType": "1B1B",
+          "unitPrice": 4225,
+          "unit": "06 17-26 PH",
+          "floorplan": "https://codehs.com/uploads/6da196d52dc0ee80426374f8f7b6a748"
+        },
+        {
+          "roomType": "2B2B",
+          "unitPrice": 6200,
+          "unit": "B 7-47",
+          "floorplan": "https://codehs.com/uploads/bfe6206a3b4ee82d84a1ce40a830937e"
+        }
+      ],
+      "agentName": "Ben Stone",
+      "agentPhoneNumber": "646-718-1667",
+      "agentEmail": "benstone@gmail.com",
+      "comments": [
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        }
+      ]
+    },
+
+    {
+      "id": "M03",
+      "mainArea": "Manhattan",
+      "mainAreaId": 1,
+      "subArea": "Downtown Manhattan",
+      "apartmentName": "180 Water Street",
+      "address": "180 Water Street,NY 10038",
+      "priceRange": "3500 - 4,500",
+      "roomTypes": "Studio | 1BR | 2BR",
+      "phoneNumber": "212-422-0180",
+      "thumbnailPhoto": "https://codehs.com/uploads/62d4e68b2c16ab9b759a765399b65d74",
+      "apartmentPhotos": [
+        "https://codehs.com/uploads/71160744624f140b8be1eba5460185b8",
+        "https://codehs.com/uploads/a989f70d9ea51c4874518cde8b02f610",
+        "https://codehs.com/uploads/b8d3162e0c1357fa7768172f5e53f170"
+      ],
+      "amenities": [
+        "Rooftop swimming pool",
+        "Fully equipped gym",
+        "Resident lounge",
+        "Yoga Studio",
+        "Public dining room"
+      ],
+      "studentMembers": ["Pace", "Pratt Institute", "NYU Tandon"],
+      "availableFloorplans": [
+        {
+          "roomType": "Studio",
+          "unitPrice": 3875,
+          "unit": "H 9-38",
+          "floorplan": "https://codehs.com/uploads/b47662a8eec50246e2657a1f177582a7"
+        },
+        {
+          "roomType": "1B1B",
+          "unitPrice": 4225,
+          "unit": "06 17-26 PH",
+          "floorplan": "https://codehs.com/uploads/6da196d52dc0ee80426374f8f7b6a748"
+        },
+        {
+          "roomType": "2B2B",
+          "unitPrice": 6200,
+          "unit": "B 7-47",
+          "floorplan": "https://codehs.com/uploads/bfe6206a3b4ee82d84a1ce40a830937e"
+        }
+      ],
+      "agentName": "Maureen Charles",
+      "agentPhoneNumber": "347-566-5854",
+      "agentEmail": "maureen.charles@gmail.com",
       "comments": [
         {
           "username": "",

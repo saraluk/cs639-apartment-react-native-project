@@ -7,30 +7,41 @@ const data = require("../util/Data.json");
 
 export default class SearchResultScreen extends Component {
   state = {
-    apartments: []
+    apartments: data.apartments,
+    filteredList: [],
+    mainArea: ""
   };
 
   componentDidMount() {
+    const params = this.props.route.params;
+    const mainAreaId = params.key;
+    const mainAreaName = params.mainArea;
+    let filtered;
+    if (mainAreaId != null) {
+      filtered = this.state.apartments.filter(apartment => {
+        return apartment.mainAreaId == mainAreaId;
+      });
+      console.log(filtered);
+    } else {
+      filtered = this.state.apartments;
+    }
+
     this.setState({
-      apartments: data.apartments
+      filteredList: filtered,
+      mainArea: mainAreaName
     });
   }
 
   render() {
-    const params = this.props.route.params;
-    const mainAreaId = params.mainAreaId;
-    const mainArea = params.mainArea;
-    let filtered = this.state.apartments.filter(apartment => {
-      return apartment.mainAreaId == mainAreaId;
-    });
-    console.log(filtered);
-
     return (
       <View style={styles.container}>
-        <SearchBar mainArea={mainArea} results={filtered.length}></SearchBar>
+        <SearchBar
+          mainArea={this.state.mainArea}
+          results={this.state.filteredList.length}
+        ></SearchBar>
         <ScrollView>
-          {filtered.length > 0 &&
-            filtered.map(apartment => (
+          {this.state.filteredList.length > 0 &&
+            this.state.filteredList.map(apartment => (
               <ApartmentCard
                 key={apartment.id}
                 thumbnailPhoto={apartment.thumbnailPhoto}
@@ -39,7 +50,7 @@ export default class SearchResultScreen extends Component {
                 priceRange={apartment.priceRange}
                 roomTypes={apartment.roomTypes}
                 onPress={() =>
-                  this.props.navigation.navigate("ApartmentDetail", {
+                  this.props.navigation.navigate("ApartmentDetailScreen", {
                     key: apartment.id
                   })
                 }

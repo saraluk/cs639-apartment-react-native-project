@@ -16,8 +16,8 @@ export default class SearchScreen extends Component {
             <LocationCard
               label={"Manhattan"}
               onPress={() =>
-                this.props.navigation.navigate("SearchResult", {
-                  mainAreaId: 1,
+                this.props.navigation.navigate("SearchResultScreen", {
+                  key: 1,
                   mainArea: "Manhattan"
                 })
               }
@@ -25,8 +25,8 @@ export default class SearchScreen extends Component {
             <LocationCard
               label={"Long Island City"}
               onPress={() =>
-                this.props.navigation.navigate("SearchResult", {
-                  mainAreaId: 2,
+                this.props.navigation.navigate("SearchResultScreen", {
+                  key: 2,
                   mainArea: "Long Island City"
                 })
               }
@@ -36,8 +36,8 @@ export default class SearchScreen extends Component {
             <LocationCard
               label={"Brooklyn"}
               onPress={() =>
-                this.props.navigation.navigate("SearchResult", {
-                  mainAreaId: 3,
+                this.props.navigation.navigate("SearchResultScreen", {
+                  key: 3,
                   mainArea: "Brooklyn"
                 })
               }
@@ -45,8 +45,8 @@ export default class SearchScreen extends Component {
             <LocationCard
               label={"Jersey City"}
               onPress={() =>
-                this.props.navigation.navigate("SearchResult", {
-                  mainAreaId: 4,
+                this.props.navigation.navigate("SearchResultScreen", {
+                  key: 4,
                   mainArea: "Jersey City"
                 })
               }
@@ -56,8 +56,8 @@ export default class SearchScreen extends Component {
             <LocationCard
               label={"Others"}
               onPress={() =>
-                this.props.navigation.navigate("SearchResult", {
-                  mainAreaId: 5,
+                this.props.navigation.navigate("SearchResultScreen", {
+                  key: 5,
                   mainArea: "Others"
                 })
               }
@@ -65,8 +65,8 @@ export default class SearchScreen extends Component {
             <LocationCard
               label={"All"}
               onPress={() =>
-                this.props.navigation.navigate("SearchResult", {
-                  mainAreaId: 0,
+                this.props.navigation.navigate("SearchResultScreen", {
+                  key: null,
                   mainArea: "All"
                 })
               }
@@ -85,7 +85,7 @@ SearchScreen.navigationOptions = {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0a2e49"
+    backgroundColor: "#142536"
   },
   TitleTextContainer: {
     height: (2.8 * deviceHeight) / 20,

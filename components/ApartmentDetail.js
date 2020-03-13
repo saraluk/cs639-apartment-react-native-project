@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, ScrollView } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { deviceHeight, deviceWidth } from "../constants/Layout.js";
 import SaveButton from "../components/SaveButton.js";
 import ShareButton from "../components/ShareButton.js";
@@ -7,6 +7,7 @@ import HorizontalLine from "./HorizontalLine.js";
 import AmenitiesList from "./AmenitiesList.js";
 import SectionHeader from "./SectionHeader.js";
 import PhotosSlider from "./PhotosSlider.js";
+import FloorplanList from "./FloorplanList";
 
 export default class ApartmentDetail extends Component {
   render() {
@@ -18,7 +19,7 @@ export default class ApartmentDetail extends Component {
           <ShareButton></ShareButton>
         </View>
         <View style={styles.detailContainer}>
-          <View style={styles.apartmentTitle}>
+          <View>
             <Text style={styles.apartmentName}>{this.props.apartmentName}</Text>
             <Text style={styles.apartmentAddress}>{this.props.address}</Text>
           </View>
@@ -27,6 +28,13 @@ export default class ApartmentDetail extends Component {
           <AmenitiesList amenitiesList={this.props.amenities}></AmenitiesList>
           <HorizontalLine></HorizontalLine>
           <SectionHeader label='Available Floorplans'></SectionHeader>
+          <FloorplanList
+            floorPlans={this.props.availableFloorplans}
+            apartmentName={this.props.apartmentName}
+          ></FloorplanList>
+
+          <HorizontalLine></HorizontalLine>
+          <SectionHeader label='Contact Agency'></SectionHeader>
         </View>
       </View>
     );
@@ -47,7 +55,6 @@ const styles = StyleSheet.create({
   detailContainer: {
     marginLeft: 2 * (deviceWidth / 20)
   },
-  apartmentTitle: {},
   apartmentName: {
     fontSize: 0.6 * (deviceHeight / 20),
     fontWeight: "bold",
