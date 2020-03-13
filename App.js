@@ -1,46 +1,114 @@
-import "react-native-gesture-handler";
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import BottomTabNavigator from "./navigation/BottomTabNavigator";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { Ionicons } from "@expo/vector-icons";
+import SearchScreen from "./screens/SearchScreen";
 import SearchResultScreen from "./screens/SearchResultScreen";
+import SavedScreen from "./screens/SavedScreen";
+import ProfileScreen from "./screens/ProfileScreen";
 import ApartmentDetailScreen from "./screens/ApartmentDetailScreen";
 
-const Stack = createStackNavigator();
+const SearchStack = createStackNavigator();
+function SearchStackScreen() {
+  return (
+    <SearchStack.Navigator>
+      <SearchStack.Screen
+        name='SearchScreen'
+        component={SearchScreen}
+        options={{
+          title: "Search",
+          headerStyle: { backgroundColor: "#ef4923" },
+          headerTitleStyle: { color: "#ffffff" },
+          headerTintColor: "#0a2e49"
+        }}
+      />
+      <SearchStack.Screen
+        name='SearchResultScreen'
+        component={SearchResultScreen}
+        options={{
+          title: "Search Results",
+          headerStyle: { backgroundColor: "#ef4923" },
+          headerTitleStyle: { color: "#ffffff" },
+          headerTintColor: "#0a2e49"
+        }}
+      />
+      <SearchStack.Screen
+        name='ApartmentDetailScreen'
+        component={ApartmentDetailScreen}
+        options={{
+          title: "Detail",
+          headerStyle: { backgroundColor: "#ef4923" },
+          headerTitleStyle: { color: "#ffffff" },
+          headerTintColor: "#0a2e49"
+        }}
+      />
+    </SearchStack.Navigator>
+  );
+}
+const SavedStack = createStackNavigator();
+function SavedStackScreen() {
+  return (
+    <SavedStack.Navigator>
+      <SavedStack.Screen
+        name='SavedScreen'
+        component={SavedScreen}
+        options={{
+          title: "Saved",
+          headerStyle: { backgroundColor: "#ef4923" },
+          headerTitleStyle: { color: "#ffffff" },
+          headerTintColor: "#0a2e49"
+        }}
+      />
+    </SavedStack.Navigator>
+  );
+}
 
+const ProfileStack = createStackNavigator();
+function ProfileStackScreen() {
+  return (
+    <ProfileStack.Navigator>
+      <ProfileStack.Screen
+        name='Profile'
+        component={ProfileScreen}
+        options={{
+          title: "Profile",
+          headerStyle: { backgroundColor: "#ef4923" },
+          headerTitleStyle: { color: "#ffffff" },
+          headerTintColor: "#0a2e49"
+        }}
+      />
+    </ProfileStack.Navigator>
+  );
+}
+
+const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name='Root'
-          component={BottomTabNavigator}
-          options={{
-            headerStyle: { backgroundColor: "#ef4923" },
-            headerTitleStyle: { color: "#ffffff" }
-          }}
-        />
-        <Stack.Screen
-          name='SearchResultScreen'
-          component={SearchResultScreen}
-          options={{
-            title: "Search Results",
-            headerStyle: { backgroundColor: "#ef4923" },
-            headerTitleStyle: { color: "#ffffff" },
-            headerTintColor: "#0a2e49"
-          }}
-        />
-        <Stack.Screen
-          name='ApartmentDetailScreen'
-          component={ApartmentDetailScreen}
-          options={{
-            title: "Detail",
-            headerStyle: { backgroundColor: "#ef4923" },
-            headerTitleStyle: { color: "#ffffff" },
-            headerTintColor: "#0a2e49"
-          }}
-        />
-      </Stack.Navigator>
+      <Tab.Navigator
+        screenOptions={({ route }) => ({
+          tabBarIcon: ({ color, size }) => {
+            let iconName;
+            if (route.name === "Search") {
+              iconName = "ios-search";
+            } else if (route.name === "Saved") {
+              iconName = "ios-bookmark";
+            } else if (route.name === "Profile") {
+              iconName = "md-person";
+            }
+            return <Ionicons name={iconName} size={size} color={color} />;
+          }
+        })}
+        tabBarOptions={{
+          activeTintColor: "#ef4923",
+          inactiveTintColor: "#333333"
+        }}
+      >
+        <Tab.Screen name='Search' component={SearchStackScreen} />
+        <Tab.Screen name='Saved' component={SavedStackScreen} />
+        <Tab.Screen name='Profile' component={ProfileStackScreen} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }
