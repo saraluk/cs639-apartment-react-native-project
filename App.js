@@ -21,7 +21,7 @@ export default function App() {
           }}
         />
         <Stack.Screen
-          name='SearchResult'
+          name='SearchResultScreen'
           component={SearchResultScreen}
           options={{
             title: "Search Results",
@@ -31,7 +31,7 @@ export default function App() {
           }}
         />
         <Stack.Screen
-          name='ApartmentDetail'
+          name='ApartmentDetailScreen'
           component={ApartmentDetailScreen}
           options={{
             title: "Detail",
