@@ -1,4 +1,4 @@
-## Instructions
+## Instructions for Team Members
 1. Open Terminal
 2. cd to a folder where you want the project folder to be
 for example,
