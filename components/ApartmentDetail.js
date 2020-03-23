@@ -8,34 +8,42 @@ import AmenitiesList from "./AmenitiesList.js";
 import SectionHeader from "./SectionHeader.js";
 import PhotosSlider from "./PhotosSlider.js";
 import FloorplanList from "./FloorplanList";
+import AgencyInfo from "./AgencyInfo.js";
+import ContactForm from "./ContactForm.js";
+import Comment from "./Comment.js";
 
 export default class ApartmentDetail extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <PhotosSlider photos={this.props.apartmentPhotos}></PhotosSlider>
+        <PhotosSlider apartmentObject={this.props.apartmentObject} />
         <View style={styles.buttonContainer}>
-          <SaveButton></SaveButton>
+          <SaveButton />
           <View style={styles.space}></View>
-          <ShareButton></ShareButton>
+          <ShareButton />
         </View>
         <View style={styles.detailContainer}>
           <View>
-            <Text style={styles.apartmentName}>{this.props.apartmentName}</Text>
-            <Text style={styles.apartmentAddress}>{this.props.address}</Text>
+            <Text style={styles.apartmentName}>
+              {this.props.apartmentObject.apartmentName}
+            </Text>
+            <Text style={styles.apartmentAddress}>
+              {this.props.apartmentObject.address}
+            </Text>
           </View>
-          <HorizontalLine></HorizontalLine>
-          <SectionHeader label='Amenities'></SectionHeader>
-          <AmenitiesList amenitiesList={this.props.amenities}></AmenitiesList>
-          <HorizontalLine></HorizontalLine>
-          <SectionHeader label='Available Floorplans'></SectionHeader>
-          <FloorplanList
-            floorPlans={this.props.availableFloorplans}
-            apartmentName={this.props.apartmentName}
-          ></FloorplanList>
-
-          <HorizontalLine></HorizontalLine>
-          <SectionHeader label='Contact Agency'></SectionHeader>
+          <HorizontalLine />
+          <SectionHeader label='Amenities' />
+          <AmenitiesList apartmentObject={this.props.apartmentObject} />
+          <HorizontalLine />
+          <SectionHeader label='Available Floorplans' />
+          <FloorplanList apartmentObject={this.props.apartmentObject} />
+          <HorizontalLine />
+          <SectionHeader label='Contact Agency' />
+          <AgencyInfo apartmentObject={this.props.apartmentObject} />
+          <ContactForm />
+          <HorizontalLine />
+          <SectionHeader label='Comments' />
+          <Comment apartmentObject={this.props.apartmentObject} />
         </View>
       </View>
     );

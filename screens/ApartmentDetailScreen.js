@@ -30,11 +30,7 @@ export default class ApartmentDetailScreen extends Component {
             this.state.filteredList.map(apartment => (
               <ApartmentDetail
                 key={apartment.id}
-                apartmentName={apartment.apartmentName}
-                address={apartment.address}
-                amenities={apartment.amenities}
-                apartmentPhotos={apartment.apartmentPhotos}
-                availableFloorplans={apartment.availableFloorplans}
+                apartmentObject={apartment}
               ></ApartmentDetail>
             ))}
         </ScrollView>

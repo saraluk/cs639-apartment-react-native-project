@@ -13,8 +13,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 export default class FloorplanList extends Component {
   state = {
-    floorPlans: this.props.floorPlans,
-    apartmentName: this.props.apartmentName,
+    apartment: this.props.apartmentObject,
     modalOpen: false,
     currentUnit: {}
   };
@@ -44,7 +43,7 @@ export default class FloorplanList extends Component {
               <View style={styles.modalBodyContent}>
                 <View style={styles.rowContainer}>
                   <Text style={styles.modalUnitTitle}>
-                    {this.state.apartmentName}
+                    {this.state.apartment.apartmentName}
                   </Text>
                   <Text style={styles.modalUnitSubtitle}>
                     {this.state.currentUnit.roomType} |{" "}
@@ -58,7 +57,9 @@ export default class FloorplanList extends Component {
               <View style={styles.modalImageContainer}>
                 <Image
                   style={styles.modalImage}
-                  source={{ uri: this.state.currentUnit.floorplan }}
+                  source={{
+                    uri: this.state.currentUnit.floorplan
+                  }}
                 />
               </View>
             </View>
@@ -66,7 +67,7 @@ export default class FloorplanList extends Component {
         </Modal>
 
         <ScrollView horizontal={true}>
-          {this.state.floorPlans.map(unit => (
+          {this.state.apartment.availableFloorplans.map(unit => (
             <View style={styles.individualContainer}>
               <TouchableHighlight
                 underlayColor='transparent'
