@@ -16,6 +16,7 @@ export default class ApartmentDetail extends Component {
         <PhotosSlider photos={this.props.apartmentPhotos}></PhotosSlider>
         <View style={styles.buttonContainer}>
           <SaveButton></SaveButton>
+          <View style={styles.space}></View>
           <ShareButton></ShareButton>
         </View>
         <View style={styles.detailContainer}>
@@ -63,5 +64,8 @@ const styles = StyleSheet.create({
   apartmentAddress: {
     fontSize: 0.35 * (deviceHeight / 20),
     color: "#0a2e49"
+  },
+  space: {
+    width: 0.3 * (deviceWidth / 20)
   }
 });

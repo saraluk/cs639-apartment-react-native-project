@@ -3,11 +3,55 @@ import { View, Text, StyleSheet, TouchableHighlight } from "react-native";
 import { deviceHeight, deviceWidth } from "../constants/Layout";
 import { Ionicons } from "@expo/vector-icons";
 
+const savedList = require("../util/SavedList.json");
+
 export default class SaveButton extends Component {
+  state = {
+    onPressColor: "transparent",
+    isSaved: true,
+    savedList: savedList.savedApartment,
+    apartment: this.props.apartmentObject
+  };
+
+  handleButtonOnPress = () => {
+    let toggle = this.state.isSaved;
+    this.setState({
+      isSaved: !toggle
+    });
+    if (toggle) {
+      this.setState({
+        onPressColor: "#ef4923"
+      });
+      //need to fix
+      this.state.savedList.push(this.state.apartment);
+      console.log(this.state.savedList);
+    } else {
+      this.setState({
+        onPressColor: "transparent"
+      });
+    }
+  };
+
   render() {
     return (
-      <TouchableHighlight>
-        <View style={styles.container}>
+      <TouchableHighlight
+        onPress={this.handleButtonOnPress}
+        underlayColor='transparent'
+        style={styles.container}
+      >
+        <View
+          style={{
+            height: 0.7 * (deviceHeight / 20),
+            width: 4 * (deviceWidth / 20),
+            flexDirection: "row",
+            borderWidth: 1,
+            borderRadius: 50,
+            borderColor: "#ef4923",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: this.state.onPressColor
+          }}
+        >
           <Ionicons style={styles.icon} name='ios-bookmark' />
           <Text>Save</Text>
         </View>
@@ -18,7 +62,6 @@ export default class SaveButton extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "row",
     height: 0.7 * (deviceHeight / 20),
     width: 4 * (deviceWidth / 20),
     borderColor: "#ef4923",

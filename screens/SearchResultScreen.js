@@ -44,6 +44,7 @@ export default class SearchResultScreen extends Component {
             this.state.filteredList.map(apartment => (
               <ApartmentCard
                 key={apartment.id}
+                apartmentObject={apartment}
                 thumbnailPhoto={apartment.thumbnailPhoto}
                 apartmentName={apartment.apartmentName}
                 subArea={apartment.subArea}
