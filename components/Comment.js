@@ -18,6 +18,24 @@ export default class Comment extends Component {
   render() {
     return (
       <View style={styles.container}>
+        {this.state.apartment.comments.length > 0 &&
+          this.state.apartment.comments.map(comment => (
+            <View style={styles.commentDisplayContainer}>
+              <View style={styles.rowContainer}>
+                <Text style={styles.username}>{comment.username}</Text>
+                <View style={styles.starIconContainer}>
+                  <Ionicons style={styles.icon} name='ios-star' />
+                  <Ionicons style={styles.icon} name='ios-star' />
+                  <Ionicons style={styles.icon} name='ios-star' />
+                  <Ionicons style={styles.icon} name='ios-star' />
+                  <Ionicons style={styles.icon} name='ios-star' />
+                </View>
+              </View>
+              <View>
+                <Text>{comment.comment}</Text>
+              </View>
+            </View>
+          ))}
         <View>
           <Text>Add your comment</Text>
           <TextInput
@@ -55,24 +73,6 @@ export default class Comment extends Component {
             </TouchableHighlight>
           </View>
         </View>
-        {this.state.apartment.comments.length > 0 &&
-          this.state.apartment.comments.map(comment => (
-            <View style={styles.commentDisplayContainer}>
-              <View style={styles.rowContainer}>
-                <Text style={styles.username}>{comment.username}</Text>
-                <View style={styles.starIconContainer}>
-                  <Ionicons style={styles.icon} name='ios-star' />
-                  <Ionicons style={styles.icon} name='ios-star' />
-                  <Ionicons style={styles.icon} name='ios-star' />
-                  <Ionicons style={styles.icon} name='ios-star' />
-                  <Ionicons style={styles.icon} name='ios-star' />
-                </View>
-              </View>
-              <View>
-                <Text>{comment.comment}</Text>
-              </View>
-            </View>
-          ))}
       </View>
     );
   }
