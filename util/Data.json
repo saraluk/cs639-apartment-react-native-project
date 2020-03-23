@@ -90,6 +90,174 @@
       ]
     },
     {
+      "id": "L02",
+      "mainArea": "Long Island City",
+      "mainAreaId": 2,
+      "subArea": "Long Island City",
+      "apartmentName": "Alta",
+      "address": "29-22 Northern Boulevard LIC, NY 11101",
+      "priceRange": "2,400 - 6,000",
+      "roomTypes": "Studio | 1BR | 2BR",
+      "phoneNumber": "718-606-2922",
+      "thumbnailPhoto": "https://codehs.com/uploads/01dafa995cc46c23a875560f74db9d36",
+      "apartmentPhotos": [
+        "https://codehs.com/uploads/6d41be640b4e8d5240a81bffd0a8069a",
+        "https://codehs.com/uploads/d70f42747eff255ea7a640017038ba74",
+        "https://codehs.com/uploads/fd2083e3c2cccf86fb81aa4310cc1849",
+        "https://codehs.com/uploads/371cf087e41eb416ab9feb64679a4aee",
+        "https://codehs.com/uploads/f38de5945774140dd891f21dc9a7b57a",
+        "https://codehs.com/uploads/72fc5f2e077ba47e49f3983c1ab2058c",
+        "https://codehs.com/uploads/33ad99e59db518b8c41ce99942d05153",
+        "https://codehs.com/uploads/e311127aed1a592148dd35a57007e3eb",
+        "https://codehs.com/uploads/eeae4c8b725c4ce0ec70e05d060ed10b"
+      ],
+      "amenities": [
+        "Gym",
+        "Library",
+        "Pool",
+        "Landscape Roof Terrace",
+        "Outdoor Deck",
+        "Lounge",
+        "Pet Club"
+      ],
+      "studentMembers": [
+        "NYU",
+        "Fordham",
+        "NYIT",
+        "Yeshiva",
+        "SVA",
+        "FIT",
+        "TNS"
+      ],
+      "availableFloorplans": [
+        {
+          "roomType": "Studio",
+          "unitPrice": 2800,
+          "unit": "#2812",
+          "Floorplan": "https://codehs.com/uploads/30f1d983a4c81d55a617209e089eae2e"
+        },
+        {
+          "roomType": "1Bed 1Bath",
+          "unitPrice": 3400,
+          "unit": "#2214",
+          "Floorplan": "https://codehs.com/uploads/a2ce51eefb10b728a0d293b4017d31f4"
+        },
+        {
+          "roomType": "1Bed 1Bath",
+          "unitPrice": 4300,
+          "unit": "#3214",
+          "floorplan": "https://codehs.com/uploads/24e129a8bc061785b64fe1dfc88aefec"
+        },
+        {
+          "roomType": "2Bed 2Bath",
+          "unitPrice": 5400,
+          "unit": "#3004",
+          "floorplan": "https://codehs.com/uploads/005c9b75ee425931efe675cd5192b599"
+        }
+      ],
+      "agentName": "",
+      "agentPhoneNumber": "",
+      "agentEmail": "",
+      "comments": [
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        }
+      ]
+    },
+    {
+      "id": "L03",
+      "mainArea": "Long Island City",
+      "mainAreaId": 2,
+      "subArea": "Long Island City",
+      "apartmentName": "Eagle Lofts",
+      "address": "43-22 Queens St, Queens, NY 11101",
+      "priceRange": "2,400 - 6,000",
+      "roomTypes": "Studio | 1BR | 2BR",
+      "phoneNumber": "718-552-9999",
+      "thumbnailPhoto": "https://codehs.com/uploads/446bd44cda0a0955e2a9ca3724100f01",
+      "apartmentPhotos": [
+        "https://codehs.com/uploads/b9345d6a9b855f2e9c7af782ac3a6afe",
+        "https://codehs.com/uploads/b0f63174b443c5f05609acf2fd82c1bc",
+        "https://codehs.com/uploads/64b0aaf3b58ddd0ec61115e038825437",
+        "https://codehs.com/uploads/f4d7813a68cc8254b921ba91d7686505",
+        "https://codehs.com/uploads/880aec8644873c47779919749b4b4cc5",
+        "https://codehs.com/uploads/d7eaa1d557820c49b254c1c2ba6da620",
+        "https://codehs.com/uploads/aca2485f2019b4e0a88dfd5fb9ae8530"
+      ],
+      "amenities": [
+        "Game Room",
+        "Fitness Center",
+        "Lounge",
+        "Roof Terrace",
+        "Grill",
+        "Bike Storage",
+        "Business Center",
+        "Cinema room"
+      ],
+      "studentMembers": [
+        "NYU",
+        "Fordham",
+        "NYIT",
+        "Yeshiva",
+        "SVA",
+        "FIT",
+        "TNS"
+      ],
+      "availableFloorplans": [
+        {
+          "roomType": "Studio",
+          "unitPrice": 2900,
+          "unit": "#213",
+          "Floorplan": "https://codehs.com/uploads/77a2f56ffd445a1fbc50e33c4f3efc2a"
+        },
+        {
+          "roomType": "1Bed 1Bath",
+          "unitPrice": 3700,
+          "unit": "#5406",
+          "Floorplan": "https://codehs.com/uploads/a24ed4a30bb2b4ad544173f60c972cf4"
+        },
+        {
+          "roomType": "2Bed 2Bath",
+          "unitPrice": 5000,
+          "unit": "#2701",
+          "floorplan": "https://codehs.com/uploads/a19c7086e1946a2b25720445e5a1c454"
+        }
+      ],
+      "agentName": "",
+      "agentPhoneNumber": "",
+      "agentEmail": "",
+      "comments": [
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        },
+        {
+          "username": "",
+          "comment": "",
+          "rating": ""
+        }
+      ]
+    },
+
+    {
       "id": "B01",
       "mainArea": "Brooklyn",
       "mainAreaId": 3,

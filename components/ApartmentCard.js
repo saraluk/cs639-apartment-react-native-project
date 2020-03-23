@@ -51,7 +51,10 @@ export default class ApartmentCard extends Component {
               </View>
               <View style={styles.buttonContainer}>
                 <View style={styles.rowContainer}>
-                  <SaveButton></SaveButton>
+                  <SaveButton
+                    apartmentObject={this.props.apartmentObject}
+                  ></SaveButton>
+                  <View style={styles.space}></View>
                   <ShareButton></ShareButton>
                 </View>
               </View>
@@ -117,5 +120,8 @@ const styles = StyleSheet.create({
   },
   subTitle: {
     fontSize: 0.35 * (deviceHeight / 20)
+  },
+  space: {
+    width: 0.3 * (deviceWidth / 20)
   }
 });

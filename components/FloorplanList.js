@@ -69,6 +69,7 @@ export default class FloorplanList extends Component {
           {this.state.floorPlans.map(unit => (
             <View style={styles.individualContainer}>
               <TouchableHighlight
+                underlayColor='transparent'
                 onPress={() =>
                   this.setState({
                     modalOpen: true,

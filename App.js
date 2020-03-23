@@ -60,6 +60,16 @@ function SavedStackScreen() {
           headerTintColor: "#0a2e49"
         }}
       />
+      <SavedStack.Screen
+        name='ApartmentDetailScreen'
+        component={ApartmentDetailScreen}
+        options={{
+          title: "Detail",
+          headerStyle: { backgroundColor: "#ef4923" },
+          headerTitleStyle: { color: "#ffffff" },
+          headerTintColor: "#0a2e49"
+        }}
+      />
     </SavedStack.Navigator>
   );
 }
