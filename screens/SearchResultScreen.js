@@ -45,11 +45,6 @@ export default class SearchResultScreen extends Component {
               <ApartmentCard
                 key={apartment.id}
                 apartmentObject={apartment}
-                thumbnailPhoto={apartment.thumbnailPhoto}
-                apartmentName={apartment.apartmentName}
-                subArea={apartment.subArea}
-                priceRange={apartment.priceRange}
-                roomTypes={apartment.roomTypes}
                 onPress={() =>
                   this.props.navigation.navigate("ApartmentDetailScreen", {
                     key: apartment.id

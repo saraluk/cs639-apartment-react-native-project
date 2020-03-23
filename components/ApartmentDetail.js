@@ -8,12 +8,15 @@ import AmenitiesList from "./AmenitiesList.js";
 import SectionHeader from "./SectionHeader.js";
 import PhotosSlider from "./PhotosSlider.js";
 import FloorplanList from "./FloorplanList";
+import AgencyInfo from "./AgencyInfo.js";
 
 export default class ApartmentDetail extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <PhotosSlider photos={this.props.apartmentPhotos}></PhotosSlider>
+        <PhotosSlider
+          apartmentObject={this.props.apartmentObject}
+        ></PhotosSlider>
         <View style={styles.buttonContainer}>
           <SaveButton></SaveButton>
           <View style={styles.space}></View>
@@ -21,21 +24,26 @@ export default class ApartmentDetail extends Component {
         </View>
         <View style={styles.detailContainer}>
           <View>
-            <Text style={styles.apartmentName}>{this.props.apartmentName}</Text>
-            <Text style={styles.apartmentAddress}>{this.props.address}</Text>
+            <Text style={styles.apartmentName}>
+              {this.props.apartmentObject.apartmentName}
+            </Text>
+            <Text style={styles.apartmentAddress}>
+              {this.props.apartmentObject.address}
+            </Text>
           </View>
           <HorizontalLine></HorizontalLine>
           <SectionHeader label='Amenities'></SectionHeader>
-          <AmenitiesList amenitiesList={this.props.amenities}></AmenitiesList>
+          <AmenitiesList
+            apartmentObject={this.props.apartmentObject}
+          ></AmenitiesList>
           <HorizontalLine></HorizontalLine>
           <SectionHeader label='Available Floorplans'></SectionHeader>
           <FloorplanList
-            floorPlans={this.props.availableFloorplans}
-            apartmentName={this.props.apartmentName}
+            apartmentObject={this.props.apartmentObject}
           ></FloorplanList>
-
           <HorizontalLine></HorizontalLine>
           <SectionHeader label='Contact Agency'></SectionHeader>
+          <AgencyInfo apartmentObject={this.props.apartmentObject}></AgencyInfo>
         </View>
       </View>
     );

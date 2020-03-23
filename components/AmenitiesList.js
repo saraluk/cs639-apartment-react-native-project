@@ -5,11 +5,11 @@ import { Ionicons } from "@expo/vector-icons";
 
 export default class AmenitiesList extends Component {
   state = {
-    amenities: this.props.amenitiesList
+    apartment: this.props.apartmentObject.amenities
   };
 
   render() {
-    const newArr = [...this.state.amenities];
+    const newArr = [...this.state.apartment];
 
     let rightArr = newArr;
     let leftArr = newArr.splice(0, Math.ceil(newArr.length / 2));
@@ -51,16 +51,12 @@ const styles = StyleSheet.create({
   },
   leftContainer: {
     flex: 1
-    // borderColor: "black",
-    // borderWidth: 1
   },
   middleContainer: {
     flex: 0.2
   },
   rightContainer: {
     flex: 1
-    // borderColor: "black",
-    // borderWidth: 1
   },
   list: {
     flexDirection: "row"

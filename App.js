@@ -10,6 +10,7 @@ import ProfileScreen from "./screens/ProfileScreen";
 import ApartmentDetailScreen from "./screens/ApartmentDetailScreen";
 
 const SearchStack = createStackNavigator();
+
 function SearchStackScreen() {
   return (
     <SearchStack.Navigator>
