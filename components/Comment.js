@@ -37,7 +37,7 @@ export default class Comment extends Component {
             </View>
           ))}
         <View>
-          <Text>Add your comment</Text>
+          <Text>Add Your Comment</Text>
           <TextInput
             style={styles.textInput}
             onChangeText={rating => this.setState({ rating })}
