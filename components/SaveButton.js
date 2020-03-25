@@ -9,8 +9,7 @@ export default class SaveButton extends Component {
   state = {
     onPressColor: "transparent",
     isSaved: true,
-    savedList: savedList.savedApartment,
-    apartment: this.props.apartmentObject
+    savedList: savedList.savedApartment
   };
 
   handleButtonOnPress = () => {
@@ -23,7 +22,7 @@ export default class SaveButton extends Component {
         onPressColor: "#ef4923"
       });
       //need to fix
-      this.state.savedList.push(this.state.apartment);
+      this.state.savedList.push(this.props.apartmentObject);
       console.log(this.state.savedList);
     } else {
       this.setState({

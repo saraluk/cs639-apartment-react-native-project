@@ -12,10 +12,6 @@ import SaveButton from "./SaveButton";
 import ShareButton from "./ShareButton";
 
 export default class ApartmentCard extends Component {
-  state = {
-    apartment: this.props.apartmentObject
-  };
-
   render() {
     console.log(this);
     return (
@@ -28,20 +24,20 @@ export default class ApartmentCard extends Component {
             <View style={styles.leftContainer}>
               <Image
                 style={styles.thumbnailPhoto}
-                source={{ uri: this.state.apartment.thumbnailPhoto }}
+                source={{ uri: this.props.apartmentObject.thumbnailPhoto }}
               />
             </View>
             <View style={styles.rightContainer}>
               <View style={styles.apartmentName}>
                 <Text style={styles.title}>
-                  {this.state.apartment.apartmentName}
+                  {this.props.apartmentObject.apartmentName}
                 </Text>
               </View>
               <View style={styles.apartmentSubArea}>
                 <View style={styles.rowContainer}>
                   <Ionicons style={styles.icon} name='ios-pin' />
                   <Text style={styles.subTitle}>
-                    {this.state.apartment.subArea}
+                    {this.props.apartmentObject.subArea}
                   </Text>
                 </View>
               </View>
@@ -49,7 +45,7 @@ export default class ApartmentCard extends Component {
                 <View style={styles.rowContainer}>
                   <Ionicons style={styles.icon} name='md-cash' />
                   <Text style={styles.subTitle}>
-                    {this.state.apartment.priceRange}
+                    {this.props.apartmentObject.priceRange}
                   </Text>
                 </View>
               </View>
@@ -57,14 +53,14 @@ export default class ApartmentCard extends Component {
                 <View style={styles.rowContainer}>
                   <Ionicons style={styles.icon} name='md-bed' />
                   <Text style={styles.subTitle}>
-                    {this.state.apartment.roomTypes}
+                    {this.props.apartmentObject.roomTypes}
                   </Text>
                 </View>
               </View>
               <View style={styles.buttonContainer}>
                 <View style={styles.rowContainer}>
                   <SaveButton
-                    apartmentObject={this.state.apartment}
+                    apartmentObject={this.props.apartmentObject}
                   ></SaveButton>
                   <View style={styles.space}></View>
                   <ShareButton></ShareButton>
