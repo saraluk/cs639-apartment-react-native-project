@@ -11,15 +11,14 @@ import { Ionicons } from "@expo/vector-icons";
 
 export default class Comment extends Component {
   state = {
-    apartment: this.props.apartmentObject,
     rating: "",
     commentMessage: ""
   };
   render() {
     return (
       <View style={styles.container}>
-        {this.state.apartment.comments.length > 0 &&
-          this.state.apartment.comments.map((comment, index) => (
+        {this.props.apartmentObject.comments.length > 0 &&
+          this.props.apartmentObject.comments.map((comment, index) => (
             <View key={index} style={styles.commentDisplayContainer}>
               <View style={styles.rowContainer}>
                 <Text style={styles.username}>{comment.username}</Text>

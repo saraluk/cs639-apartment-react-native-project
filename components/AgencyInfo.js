@@ -3,10 +3,6 @@ import { View, StyleSheet, Text, Image } from "react-native";
 import { deviceHeight, deviceWidth } from "../constants/Layout";
 
 export default class AgencyInfo extends Component {
-  state = {
-    apartment: this.props.apartmentObject
-  };
-
   render() {
     return (
       <View style={styles.container}>
@@ -19,10 +15,10 @@ export default class AgencyInfo extends Component {
           />
           <View style={styles.textContainer}>
             <Text style={styles.infoText}>
-              {this.state.apartment.agentName}
+              {this.props.apartmentObject.agentName}
             </Text>
             <Text style={styles.infoText}>
-              {this.state.apartment.agentPhoneNumber}
+              {this.props.apartmentObject.agentPhoneNumber}
             </Text>
           </View>
         </View>

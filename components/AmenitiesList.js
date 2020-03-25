@@ -4,13 +4,8 @@ import { deviceHeight, deviceWidth } from "../constants/Layout.js";
 import { Ionicons } from "@expo/vector-icons";
 
 export default class AmenitiesList extends Component {
-  state = {
-    apartment: this.props.apartmentObject.amenities
-  };
-
   render() {
-    const newArr = [...this.state.apartment];
-
+    let newArr = [...this.props.apartmentObject.amenities];
     let rightArr = newArr;
     let leftArr = newArr.splice(0, Math.ceil(newArr.length / 2));
 
