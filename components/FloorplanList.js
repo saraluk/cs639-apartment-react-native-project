@@ -67,8 +67,8 @@ export default class FloorplanList extends Component {
         </Modal>
 
         <ScrollView horizontal={true}>
-          {this.state.apartment.availableFloorplans.map(unit => (
-            <View style={styles.individualContainer}>
+          {this.state.apartment.availableFloorplans.map((unit, index) => (
+            <View key={index} style={styles.individualContainer}>
               <TouchableHighlight
                 underlayColor='transparent'
                 onPress={() =>

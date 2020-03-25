@@ -19,8 +19,8 @@ export default class Comment extends Component {
     return (
       <View style={styles.container}>
         {this.state.apartment.comments.length > 0 &&
-          this.state.apartment.comments.map(comment => (
-            <View style={styles.commentDisplayContainer}>
+          this.state.apartment.comments.map((comment, index) => (
+            <View key={index} style={styles.commentDisplayContainer}>
               <View style={styles.rowContainer}>
                 <Text style={styles.username}>{comment.username}</Text>
                 <View style={styles.starIconContainer}>
