@@ -18,8 +18,8 @@ export default class AmenitiesList extends Component {
       <View style={styles.container}>
         <View style={styles.rowContainer}>
           <View style={styles.leftContainer}>
-            {leftArr.map(amenity => (
-              <View style={styles.list}>
+            {leftArr.map((amenity, index) => (
+              <View key={index} style={styles.list}>
                 <Ionicons style={styles.icon} name='md-arrow-dropright' />
                 <Text style={styles.text}>{amenity}</Text>
               </View>
@@ -27,8 +27,8 @@ export default class AmenitiesList extends Component {
           </View>
           <View style={styles.middleContainer}></View>
           <View style={styles.rightContainer}>
-            {rightArr.map(amenity => (
-              <View style={styles.list}>
+            {rightArr.map((amenity, index) => (
+              <View key={index} style={styles.list}>
                 <Ionicons style={styles.icon} name='md-arrow-dropright' />
                 <Text style={styles.text}>{amenity}</Text>
               </View>
