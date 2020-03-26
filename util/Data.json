@@ -132,15 +132,15 @@
       "availableFloorplans": [
         {
           "roomType": "Studio",
-          "unitPrice": 2800,
-          "unit": "#2812",
-          "Floorplan": "https://codehs.com/uploads/30f1d983a4c81d55a617209e089eae2e"
+          "unitPrice": 2912,
+          "unit": "#2806",
+          "floorplan": "https://codehs.com/uploads/a376959eda8ffb5573d1189021e42eb2"
         },
         {
           "roomType": "1Bed 1Bath",
-          "unitPrice": 3400,
-          "unit": "#2214",
-          "Floorplan": "https://codehs.com/uploads/a2ce51eefb10b728a0d293b4017d31f4"
+          "unitPrice": 3485,
+          "unit": "#2011",
+          "floorplan": "https://codehs.com/uploads/892be06d1293c395c94c583d773d6461"
         },
         {
           "roomType": "1Bed 1Bath",
@@ -220,13 +220,13 @@
           "roomType": "Studio",
           "unitPrice": 2900,
           "unit": "#213",
-          "Floorplan": "https://codehs.com/uploads/77a2f56ffd445a1fbc50e33c4f3efc2a"
+          "floorplan": "https://codehs.com/uploads/77a2f56ffd445a1fbc50e33c4f3efc2a"
         },
         {
           "roomType": "1Bed 1Bath",
           "unitPrice": 3700,
           "unit": "#5406",
-          "Floorplan": "https://codehs.com/uploads/a24ed4a30bb2b4ad544173f60c972cf4"
+          "floorplan": "https://codehs.com/uploads/a24ed4a30bb2b4ad544173f60c972cf4"
         },
         {
           "roomType": "2Bed 2Bath",
