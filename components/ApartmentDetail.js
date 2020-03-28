@@ -11,6 +11,7 @@ import FloorplanList from "./FloorplanList";
 import AgencyInfo from "./AgencyInfo.js";
 import ContactForm from "./ContactForm.js";
 import Comment from "./Comment.js";
+import StudentMember from "./StudentMember.js";
 
 export default class ApartmentDetail extends Component {
   render() {
@@ -34,6 +35,9 @@ export default class ApartmentDetail extends Component {
           <HorizontalLine />
           <SectionHeader label='Amenities' />
           <AmenitiesList apartmentObject={this.props.apartmentObject} />
+          <HorizontalLine />
+          <SectionHeader label='Communities' />
+          <StudentMember apartmentObject={this.props.apartmentObject} />
           <HorizontalLine />
           <SectionHeader label='Available Floorplans' />
           <FloorplanList apartmentObject={this.props.apartmentObject} />
