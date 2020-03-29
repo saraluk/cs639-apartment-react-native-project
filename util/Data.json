@@ -34,13 +34,13 @@
         "BBQ Grilling Stations"
       ],
       "studentMembers": [
-        "NYU",
-        "Fordham",
-        "NYIT",
-        "Yeshiva",
-        "SVA",
-        "FIT",
-        "TNS"
+        "New York University",
+        "Fordham University",
+        "New York Institute of Technology",
+        "Yeshiva University",
+        "School of Visual Arts",
+        "Fashion Institute of Technology",
+        "The New School"
       ],
       "availableFloorplans": [
         {
@@ -121,13 +121,13 @@
         "Pet Club"
       ],
       "studentMembers": [
-        "NYU",
-        "Fordham",
-        "NYIT",
-        "Yeshiva",
-        "SVA",
-        "FIT",
-        "TNS"
+        "New York University",
+        "Fordham University",
+        "New York Institute of Technology",
+        "Yeshiva University",
+        "School of Visual Arts",
+        "Fashion Institute of Technology",
+        "The New School"
       ],
       "availableFloorplans": [
         {
@@ -207,13 +207,11 @@
         "Cinema room"
       ],
       "studentMembers": [
-        "NYU",
-        "Fordham",
-        "NYIT",
-        "Yeshiva",
-        "SVA",
-        "FIT",
-        "TNS"
+        "New York University",
+        "Fordham University",
+        "New York Institute of Technology",
+        "Fashion Institute of Technology",
+        "The New School"
       ],
       "availableFloorplans": [
         {
@@ -289,7 +287,11 @@
         "Indoor bicycle parking",
         "Private storage lockers"
       ],
-      "studentMembers": ["NYU Tandon", "Pratt", "Pace"],
+      "studentMembers": [
+        "New York University Tandon",
+        "Pratt Institute",
+        "Pace University"
+      ],
       "availableFloorplans": [
         {
           "roomType": "Studio",
@@ -365,7 +367,12 @@
         "Play room",
         "Sky lounge"
       ],
-      "studentMembers": ["NYU", "LIU", "Pace", "Baruch"],
+      "studentMembers": [
+        "New York University",
+        "Long Island University",
+        "Pace University",
+        "Baruch College"
+      ],
       "availableFloorplans": [
         {
           "roomType": "Studio",
@@ -437,7 +444,11 @@
         "Gourmet catering kitchen with private dining",
         "On-site tenant storage and bike storage"
       ],
-      "studentMembers": ["NYU", "Pace", "Pratt"],
+      "studentMembers": [
+        "New York University",
+        "Pace University",
+        "Pratt Institute"
+      ],
       "availableFloorplans": [
         {
           "roomType": "Studio",
@@ -514,7 +525,12 @@
         "Bicycle Storage",
         "Valet Parking"
       ],
-      "studentMembers": ["NYU", "Baruch", "LIU", "Fordham"],
+      "studentMembers": [
+        "New York University",
+        "Baruch College",
+        "Long Island University",
+        "Fordham University"
+      ],
       "availableFloorplans": [
         {
           "roomType": "Studio",
@@ -594,12 +610,12 @@
         "Garage parking available"
       ],
       "studentMembers": [
-        "NYU",
-        "Pace University",
-        "Pratt (Midtown)",
-        "SVA",
-        "FIT",
-        "TNS"
+        "New York University",
+        "Pace University University",
+        "Pratt Institute (Midtown)",
+        "School of Visual Arts",
+        "Fashion Institute of Technology",
+        "The New School"
       ],
       "availableFloorplans": [
         {
@@ -681,12 +697,12 @@
         "Convenient to PATH & NY Waterway"
       ],
       "studentMembers": [
-        "NYU",
-        "Pace University",
-        "Pratt (Midtown)",
-        "SVA",
-        "FIT",
-        "TNS"
+        "New York University",
+        "Pace University University",
+        "Pratt Institute (Midtown)",
+        "School of Visual Arts",
+        "Fashion Institute of Technology",
+        "The New School"
       ],
       "availableFloorplans": [
         {
@@ -766,12 +782,12 @@
         "Onsite garage parking available"
       ],
       "studentMembers": [
-        "NYU",
-        "Pace University",
-        "Pratt (Midtown)",
-        "SVA",
-        "FIT",
-        "TNS"
+        "New York University",
+        "Pace University University",
+        "Pratt Institute (Midtown)",
+        "School of Visual Arts",
+        "Fashion Institute of Technology",
+        "The New School"
       ],
       "availableFloorplans": [
         {
@@ -842,7 +858,11 @@
         "https://codehs.com/uploads/02b81f1cef1e40682de407b29fa25f0f"
       ],
       "amenities": ["Children’s Playground", "Fully equipped gym", "Dog Run"],
-      "studentMembers": ["Columbia", "Fordham", "NYIT"],
+      "studentMembers": [
+        "Columbia",
+        "Fordham University",
+        "New York Institute of Technology"
+      ],
       "availableFloorplans": [
         {
           "roomType": "Studio",
@@ -911,7 +931,11 @@
         "BBQ grills and outdoor seating areas",
         "Children’s playroom"
       ],
-      "studentMembers": ["NYU", "SVA", "Parsons"],
+      "studentMembers": [
+        "New York University",
+        "School of Visual Arts",
+        "Parsons School of Design"
+      ],
       "availableFloorplans": [
         {
           "roomType": "Studio",
@@ -977,7 +1001,11 @@
         "Yoga Studio",
         "Public dining room"
       ],
-      "studentMembers": ["Pace", "Pratt Institute", "NYU Tandon"],
+      "studentMembers": [
+        "Pace University",
+        "Pratt Institute Institute",
+        "New York University Tandon"
+      ],
       "availableFloorplans": [
         {
           "roomType": "Studio",
