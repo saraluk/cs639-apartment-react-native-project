@@ -36,11 +36,11 @@ export default class ApartmentDetail extends Component {
           <SectionHeader label='Amenities' />
           <AmenitiesList apartmentObject={this.props.apartmentObject} />
           <HorizontalLine />
-          <SectionHeader label='Communities' />
-          <StudentMember apartmentObject={this.props.apartmentObject} />
-          <HorizontalLine />
           <SectionHeader label='Available Floorplans' />
           <FloorplanList apartmentObject={this.props.apartmentObject} />
+          <HorizontalLine />
+          <SectionHeader label='Communities' />
+          <StudentMember apartmentObject={this.props.apartmentObject} />
           <HorizontalLine />
           <SectionHeader label='Contact Agency' />
           <AgencyInfo apartmentObject={this.props.apartmentObject} />
