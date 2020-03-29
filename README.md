@@ -1,34 +1,41 @@
 ## Instructions for Team Members
-### Install Node.js and Expo
-follow the instruction in the link https://expo.io/learn
 
-### Clone the repository and create your own branch
-1. Open Terminal
-2. cd to a folder where you want the project folder to be.
+1. Install NodeJS https://nodejs.org/en/
+2. Open Terminal
+3. cd to a folder where you want the project folder to be.
 For example,
 ```bash
 cd Desktop/cs639
 ```
-3. In terminal, type following command
+4. Install expo commmand line tool, type following command
+```bash
+npm install expo-cli --global
+```
+5. In terminal, type following command
 ```bash
 git clone https://github.com/saraluk/cs639-apartment-react-native-project.git
 ```
-4. cd into cs639-apartment-react-native-project
+6. cd into cs639-apartment-react-native-project
 ```bash
 cd cs639-apartment-react-native-project
 ```
-5. Install Dependencies
+7. Install Dependencies
 ```bash
 npm install
 ```
-6. To start working on a feature, create a new local branch in your computer **important !**
+8. To start working on a feature, create a new local branch in your computer **important !**
 ```bash
 git checkout -b feat/[branch-name]
 ```
-7. To create your local branch in Github
+9. To create your local branch in Github
 ```bash
 git push --set-upstream origin feat/[branch-name]
 ```
+10. Start expo
+```bash
+expo start
+```
+11. Open expo client on a device.Scan the QR code.
 
 ### Begin Development
 - Open project in Text Editor (VSCode)
