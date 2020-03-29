@@ -11,7 +11,7 @@ import ApartmentDetailScreen from "./screens/ApartmentDetailScreen";
 
 const SearchStack = createStackNavigator();
 
-function SearchStackScreen() {
+function SearchStackScreen({ navigation }) {
   return (
     <SearchStack.Navigator>
       <SearchStack.Screen
