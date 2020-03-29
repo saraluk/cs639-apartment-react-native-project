@@ -8,8 +8,8 @@ export default class SearchScreen extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.TitleTextContainer}>
-          <Text style={styles.TitleText}>Where</Text>
-          <Text style={styles.SubTitleText}>do you want to live ?</Text>
+          <Text style={styles.TitleText}>ResiHub</Text>
+          <Text style={styles.SubTitleText}>Where do you want to live ?</Text>
         </View>
         <View style={styles.buttonContainer}>
           <View style={styles.rowContainer}>
@@ -93,12 +93,12 @@ const styles = StyleSheet.create({
   },
   TitleText: {
     color: "#ef4923",
-    fontSize: deviceHeight / 20,
+    fontSize: 0.9 * (deviceHeight / 20),
     fontWeight: "bold"
   },
   SubTitleText: {
     color: "#ffffff",
-    fontSize: (0.6 * deviceHeight) / 20,
+    fontSize: (0.55 * deviceHeight) / 20,
     fontWeight: "bold"
   },
   buttonContainer: {
