@@ -1,4 +1,8 @@
 ## Instructions for Team Members
+###Install Node.js and Expo
+follow the instruction in the link https://expo.io/learn
+
+###Clone the repository and create your own branch
 1. Open Terminal
 2. cd to a folder where you want the project folder to be.
 For example,
