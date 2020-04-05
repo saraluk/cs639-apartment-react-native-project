@@ -9,24 +9,24 @@ export default class SaveButton extends Component {
   state = {
     onPressColor: "transparent",
     isSaved: true,
-    savedList: savedList.savedApartment
+    savedList: savedList.savedApartment,
   };
 
   handleButtonOnPress = () => {
     let toggle = this.state.isSaved;
     this.setState({
-      isSaved: !toggle
+      isSaved: !toggle,
     });
     if (toggle) {
       this.setState({
-        onPressColor: "#ef4923"
+        onPressColor: "#ffffff",
       });
       //need to fix
       this.state.savedList.push(this.props.apartmentObject);
       console.log(this.state.savedList);
     } else {
       this.setState({
-        onPressColor: "transparent"
+        onPressColor: "transparent",
       });
     }
   };
@@ -48,7 +48,7 @@ export default class SaveButton extends Component {
             borderColor: "#ef4923",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: this.state.onPressColor
+            backgroundColor: this.state.onPressColor,
           }}
         >
           <Ionicons style={styles.icon} name='ios-bookmark' />
@@ -67,10 +67,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 50,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   icon: {
     fontSize: 0.5 * (deviceHeight / 20),
-    marginRight: 5
-  }
+    marginRight: 5,
+  },
 });
