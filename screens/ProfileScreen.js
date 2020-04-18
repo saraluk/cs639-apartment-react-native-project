@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View, TouchableHighlight, AsyncStorage, Image } from "react-native";
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import { deviceHeight, deviceWidth } from "../constants/Layout";
 
 export default class ProfileScreen extends Component {

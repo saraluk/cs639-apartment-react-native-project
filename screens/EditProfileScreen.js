@@ -1,22 +1,9 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View, TouchableHighlight, TextInput, Image, Alert, AsyncStorage } from "react-native";
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import { deviceHeight, deviceWidth } from "../constants/Layout";
 
 export default class EditProfileScreen extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      name: "",
-      username: "",
-      email: "",
-      phone: "",
-      school: ""
-    }
-  };
-
+  
   componentDidMount = () => {
     AsyncStorage.getItem('name').then((value) => this.setState({ 'name': value }));
     AsyncStorage.getItem('username').then((value) => this.setState({ 'username': value }));
@@ -53,6 +40,18 @@ export default class EditProfileScreen extends Component {
   setSchool = (value) => {
     AsyncStorage.setItem('school', value);
     this.setState({ 'school': value });
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      name: "",
+      username: "",
+      email: "",
+      phone: "",
+      school: ""
+    }
   };
 
   render() {
@@ -176,8 +175,9 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     alignItems: "center",
-    justifyContent: "center",
-    marginBottom: 10
+    justifyContent: "space-around",
+    marginBottom: 20,
+    flexDirection: 'row'
   },
   changePhotoButton: {
     height: 0.7 * (deviceHeight / 20),

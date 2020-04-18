@@ -7,6 +7,7 @@ import SearchScreen from "./screens/SearchScreen";
 import SearchResultScreen from "./screens/SearchResultScreen";
 import SavedScreen from "./screens/SavedScreen";
 import ProfileScreen from "./screens/ProfileScreen";
+import EditProfileScreen from "./screens/EditProfileScreen";
 import ApartmentDetailScreen from "./screens/ApartmentDetailScreen";
 
 const SearchStack = createStackNavigator();
@@ -80,10 +81,20 @@ function ProfileStackScreen() {
   return (
     <ProfileStack.Navigator>
       <ProfileStack.Screen
-        name='Profile'
+        name='ProfileScreen'
         component={ProfileScreen}
         options={{
           title: "Profile",
+          headerStyle: { backgroundColor: "#ef4923" },
+          headerTitleStyle: { color: "#ffffff" },
+          headerTintColor: "#0a2e49"
+        }}
+      />
+      <ProfileStack.Screen
+        name='EditProfileScreen'
+        component={EditProfileScreen}
+        options={{
+          title: "Edit Profile",
           headerStyle: { backgroundColor: "#ef4923" },
           headerTitleStyle: { color: "#ffffff" },
           headerTintColor: "#0a2e49"
