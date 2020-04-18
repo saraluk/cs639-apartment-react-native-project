@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, TouchableHighlight, AsyncStorage, Image } from "react-native";
+import { StyleSheet, Text, View, TouchableHighlight, TextInput, Image, Alert, AsyncStorage } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { deviceHeight, deviceWidth } from "../constants/Layout";
 
-export default class ProfileScreen extends Component {
+export default class EditProfileScreen extends Component {
   constructor(props) {
     super(props);
 
@@ -23,6 +23,36 @@ export default class ProfileScreen extends Component {
     AsyncStorage.getItem('email').then((value) => this.setState({ 'email': value }));
     AsyncStorage.getItem('phone').then((value) => this.setState({ 'phone': value }));
     AsyncStorage.getItem('school').then((value) => this.setState({ 'school': value }));
+  };
+
+  save = () => {
+    Alert.alert("Changes saved");
+    this.props.navigation.navigate("ProfileScreen");
+  };
+
+  setName = (value) => {
+    AsyncStorage.setItem('name', value);
+    this.setState({ 'name': value });
+  };
+
+  setUsername = (value) => {
+    AsyncStorage.setItem('username', value);
+    this.setState({ 'username': value });
+  };
+
+  setEmail = (value) => {
+    AsyncStorage.setItem('email', value);
+    this.setState({ 'email': value });
+  };
+
+  setPhone = (value) => {
+    AsyncStorage.setItem('phone', value);
+    this.setState({ 'phone': value });
+  };
+
+  setSchool = (value) => {
+    AsyncStorage.setItem('school', value);
+    this.setState({ 'school': value });
   };
 
   render() {
@@ -53,35 +83,70 @@ export default class ProfileScreen extends Component {
         <View style={styles.profileInfoContainer}>
           <View style={styles.rowContainer}>
             <Text style={styles.sectionHeader}>Personal Information</Text>
-            <TouchableHighlight
-              onPress={() => this.props.navigation.navigate("EditProfileScreen")}
-            >
-              <View style={styles.button}>
-                <Text style={styles.buttonText}>Edit</Text>
-              </View>
-            </TouchableHighlight>
           </View>
+          <View style={styles.rowContainer}>
+            <Text style={styles.fieldLabel}>Name</Text>
+            <TextInput
+              style={styles.textInput}
+              onChangeText={this.setName}
+              value={this.setName}
+              placeholder='Name'
+            />
+          </View>
+          <View style={styles.rowContainer}>
+            <Text style={styles.fieldLabel}>Username</Text>
+            <TextInput
+              style={styles.textInput}
+              onChangeText={this.setUsername}
+              value={this.setUsername}
+              placeholder='Username'
+            />
+          </View>
+          <View style={styles.rowContainer}>
+            <Text style={styles.fieldLabel}>Email</Text>
+            <TextInput
+              style={styles.textInput}
+              onChangeText={this.setEmail}
+              value={this.setEmail}
+              placeholder='Email'
+            />
+          </View>
+          <View style={styles.rowContainer}>
+            <Text style={styles.fieldLabel}>Phone</Text>
+            <TextInput
+              style={styles.textInput}
+              onChangeText={this.setPhone}
+              value={this.setPhone}
+              placeholder='Phone'
+            />
+          </View>
+          <View style={styles.rowContainer}>
+            <Text style={styles.fieldLabel}>School</Text>
+            <TextInput
+              style={styles.textInput}
+              onChangeText={this.setSchool}
+              value={this.setSchool}
+              placeholder='School'
+            />
+          </View>
+        </View>
 
-          <View style={styles.rowContainer}>
-            <Text style={styles.fieldLabel}>Name: </Text>
-            <Text style={styles.info}>{this.state.name}</Text>
-          </View>
-          <View style={styles.rowContainer}>
-            <Text style={styles.fieldLabel}>Username: </Text>
-            <Text style={styles.info}>{this.state.username}</Text>
-          </View>
-          <View style={styles.rowContainer}>
-            <Text style={styles.fieldLabel}>Email: </Text>
-            <Text style={styles.info}>{this.state.email}</Text>
-          </View>
-          <View style={styles.rowContainer}>
-            <Text style={styles.fieldLabel}>Phone: </Text>
-            <Text style={styles.info}>{this.state.phone}</Text>
-          </View>
-          <View style={styles.rowContainer}>
-            <Text style={styles.fieldLabel}>School: </Text>
-            <Text style={styles.info}>{this.state.school}</Text>
-          </View>
+        <View style={styles.buttonContainer}>
+          <TouchableHighlight
+            onPress={this.save}
+          >
+            <View style={styles.button}>
+              <Text style={styles.buttonText}>Save</Text>
+            </View>
+          </TouchableHighlight>
+
+          <TouchableHighlight
+            onPress={() => this.props.navigation.navigate("ProfileScreen")}
+          >
+            <View style={styles.button}>
+              <Text style={styles.buttonText}>Cancel</Text>
+            </View>
+          </TouchableHighlight>
         </View>
       </View>
     );
