@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View, TouchableHighlight, AsyncStorage, Image } from "react-native";
 import { deviceHeight, deviceWidth } from "../constants/Layout";
+import * as ImagePicker from 'expo-image-picker';
+import Constants from 'expo-constants';
+import * as Permissions from 'expo-permissions';
 
 export default class ProfileScreen extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      image: "https://codehs.com/uploads/3fb254527bfe2f367b433f75a741e2b1",
       name: "",
       username: "",
       email: "",
@@ -21,31 +25,17 @@ export default class ProfileScreen extends Component {
     AsyncStorage.getItem('email').then((value) => this.setState({ 'email': value }));
     AsyncStorage.getItem('phone').then((value) => this.setState({ 'phone': value }));
     AsyncStorage.getItem('school').then((value) => this.setState({ 'school': value }));
+    AsyncStorage.getItem('image').then((value) => this.setState({ 'image': value }));
   };
 
   render() {
+    
     return (
       <View style={styles.container}>
         <View style={styles.profilePhotoContainer}>
           <View style={styles.backgroundContainer}>
-            <Image
-              source={{
-                uri:
-                  "https://codehs.com/uploads/3fb254527bfe2f367b433f75a741e2b1"
-              }}
-              style={styles.photo}
-            />
+            <Image source={{ uri: this.state.image }} style={styles.photo}/>
           </View>
-        </View>
-
-        <View style={styles.buttonContainer}>
-          <TouchableHighlight
-            onPress={this.changePhoto}
-          >
-            <View style={styles.changePhotoButton}>
-              <Text style={styles.buttonText}>Change Profile Photo</Text>
-            </View>
-          </TouchableHighlight>
         </View>
 
         <View style={styles.profileInfoContainer}>

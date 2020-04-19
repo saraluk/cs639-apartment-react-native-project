@@ -104,6 +104,24 @@ function ProfileStackScreen() {
   );
 }
 
+const EditProfileStack = createStackNavigator();
+function EditProfileStackScreen() {
+  return (
+    <EditProfileStack.Navigator>
+      <EditProfileStack.Screen
+        name='ProfileScreen'
+        component={ProfileScreen}
+        options={{
+          title: "Profile",
+          headerStyle: { backgroundColor: "#ef4923" },
+          headerTitleStyle: { color: "#ffffff" },
+          headerTintColor: "#0a2e49"
+        }}
+      />
+    </EditProfileStack.Navigator>
+  );
+}
+
 const Tab = createBottomTabNavigator();
 export default function App() {
   return (

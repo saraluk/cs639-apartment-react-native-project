@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View, TouchableHighlight, TextInput, Image, Alert, AsyncStorage } from "react-native";
 import { deviceHeight, deviceWidth } from "../constants/Layout";
+import * as ImagePicker from 'expo-image-picker';
+import Constants from 'expo-constants';
+import * as Permissions from 'expo-permissions';
 
 export default class EditProfileScreen extends Component {
   
@@ -10,6 +13,7 @@ export default class EditProfileScreen extends Component {
     AsyncStorage.getItem('email').then((value) => this.setState({ 'email': value }));
     AsyncStorage.getItem('phone').then((value) => this.setState({ 'phone': value }));
     AsyncStorage.getItem('school').then((value) => this.setState({ 'school': value }));
+    AsyncStorage.getItem('image').then((value) => this.setState({ 'image': value }));
   };
 
   save = () => {
@@ -42,10 +46,40 @@ export default class EditProfileScreen extends Component {
     this.setState({ 'school': value });
   };
 
+  getPermissionAsync = async () => {
+    if (Constants.platform.ios) {
+      const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
+      if (status !== 'granted') {
+        alert('Permissions to access camera roll are needed to change profile photo');
+      }
+    }
+  };
+
+  changePhoto = async () => {
+    this.getPermissionAsync();
+    try {
+      let result = await ImagePicker.launchImageLibraryAsync({
+        mediaTypes: ImagePicker.MediaTypeOptions.All,
+        allowsEditing: true,
+        aspect: [4, 3],
+        quality: 1,
+      });
+      if (!result.cancelled) {
+        this.setState({ image: result.uri });
+        AsyncStorage.setItem('image', result.uri);
+      }
+
+      console.log(result);
+    } catch (E) {
+      console.log(E);
+    }
+  };
+
   constructor(props) {
     super(props);
 
     this.state = {
+      image: "",
       name: "",
       username: "",
       email: "",
@@ -55,17 +89,12 @@ export default class EditProfileScreen extends Component {
   };
 
   render() {
+    
     return (
       <View style={styles.container}>
         <View style={styles.profilePhotoContainer}>
           <View style={styles.backgroundContainer}>
-            <Image
-              source={{
-                uri:
-                  "https://codehs.com/uploads/3fb254527bfe2f367b433f75a741e2b1"
-              }}
-              style={styles.photo}
-            />
+            <Image source={{ uri: this.state.image }} style={styles.photo}/>
           </View>
         </View>
 
@@ -88,7 +117,7 @@ export default class EditProfileScreen extends Component {
             <TextInput
               style={styles.textInput}
               onChangeText={this.setName}
-              value={this.setName}
+              value={this.state.name}
               placeholder='Name'
             />
           </View>
@@ -97,7 +126,7 @@ export default class EditProfileScreen extends Component {
             <TextInput
               style={styles.textInput}
               onChangeText={this.setUsername}
-              value={this.setUsername}
+              value={this.state.username}
               placeholder='Username'
             />
           </View>
@@ -106,7 +135,7 @@ export default class EditProfileScreen extends Component {
             <TextInput
               style={styles.textInput}
               onChangeText={this.setEmail}
-              value={this.setEmail}
+              value={this.state.email}
               placeholder='Email'
             />
           </View>
@@ -115,7 +144,7 @@ export default class EditProfileScreen extends Component {
             <TextInput
               style={styles.textInput}
               onChangeText={this.setPhone}
-              value={this.setPhone}
+              value={this.state.phone}
               placeholder='Phone'
             />
           </View>
@@ -124,7 +153,7 @@ export default class EditProfileScreen extends Component {
             <TextInput
               style={styles.textInput}
               onChangeText={this.setSchool}
-              value={this.setSchool}
+              value={this.state.school}
               placeholder='School'
             />
           </View>
@@ -171,7 +200,8 @@ const styles = StyleSheet.create({
     marginTop: 1.5 * (deviceHeight / 20),
     height: 4 * (deviceHeight / 20),
     width: 4 * (deviceHeight / 20),
-    borderRadius: 100
+    borderRadius: 100,
+    backgroundColor: '#E1E2E6'
   },
   buttonContainer: {
     alignItems: "center",
