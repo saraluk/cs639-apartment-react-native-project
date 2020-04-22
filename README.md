@@ -49,7 +49,7 @@ git add .
 git commit -m [commit-message]
 git push
 ```
-### To get the most update changes from master branch to your branch
+### To get the most update changes from Master branch to your branch
 ```bash
 git fetch
 git merge origin/master
@@ -60,13 +60,13 @@ git add .
 git commit -m [commit-message]
 git push
 ```
-### After your branch is merged to master branch, do this :
+### After your branch is merged to Master branch, do this :
 ```bash
 git checkout master
 git pull
 ```
 
-Now your local reposityory has most update from master branch, then create new branch to work on something else
+Now your local repository has the most update code from Master branch, then create new branch to work on something else
 (Do not use the branch that has already been merged, create new branch)
 ```bash
 git checkout -b feat/[branch-name]
