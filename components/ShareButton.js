@@ -6,7 +6,7 @@ import { Ionicons } from "@expo/vector-icons";
 export default class ShareButton extends Component {
   render() {
     return (
-      <TouchableHighlight>
+      <TouchableHighlight onPress={this.props.onPress}>
         <View style={styles.container}>
           <Ionicons style={styles.icon} name='ios-share' />
           <Text>Share</Text>

@@ -4,6 +4,7 @@
       "id": "L01",
       "mainArea": "Long Island City",
       "mainAreaId": 2,
+      "isSaved": false,
       "subArea": "Long Island City",
       "apartmentName": "Jackson Park",
       "address": "2816 Jackson Ave, Long Island City, NY 11101",
@@ -98,6 +99,7 @@
       "id": "L02",
       "mainArea": "Long Island City",
       "mainAreaId": 2,
+      "isSaved": false,
       "subArea": "Long Island City",
       "apartmentName": "Alta",
       "address": "29-22 Northern Boulevard LIC, NY 11101",
@@ -185,6 +187,7 @@
       "id": "L03",
       "mainArea": "Long Island City",
       "mainAreaId": 2,
+      "isSaved": false,
       "subArea": "Long Island City",
       "apartmentName": "Eagle Lofts",
       "address": "43-22 Queens St, Queens, NY 11101",
@@ -254,11 +257,11 @@
         }
       ]
     },
-
     {
       "id": "B01",
       "mainArea": "Brooklyn",
       "mainAreaId": 3,
+      "isSaved": false,
       "subArea": "Downtown Brooklyn",
       "apartmentName": "The Eagle",
       "address": "86 Fleet Pl, Brooklyn, NY 11201",
@@ -337,6 +340,7 @@
       "id": "B02",
       "mainArea": "Brooklyn",
       "mainAreaId": 3,
+      "isSaved": false,
       "subArea": "Downtown Brooklyn",
       "apartmentName": "Hub Bk",
       "address": "333 Schermerhorn St. Brooklyn, NY 11217",
@@ -413,6 +417,7 @@
       "id": "B03",
       "mainArea": "Brooklyn",
       "mainAreaId": 3,
+      "isSaved": false,
       "subArea": "Gowanus",
       "apartmentName": "365 Bond",
       "address": "365 Bond St. Brooklyn, NY 11231",
@@ -494,6 +499,7 @@
       "id": "B04",
       "mainArea": "Brooklyn",
       "mainAreaId": 3,
+      "isSaved": false,
       "subArea": "Clinton Hill",
       "apartmentName": "475 Clermont",
       "address": "475 Clermont, Brooklyn, NY 11238",
@@ -578,11 +584,11 @@
         }
       ]
     },
-
     {
       "id": "J01",
       "mainArea": "Jersey City",
       "mainAreaId": 4,
+      "isSaved": false,
       "subArea": "Newport",
       "apartmentName": "Aquablu",
       "address": "110 River Dr S, Jersey City, NJ 07310",
@@ -668,6 +674,7 @@
       "id": "J02",
       "mainArea": "Jersey City",
       "mainAreaId": 4,
+      "isSaved": false,
       "subArea": "Newport",
       "apartmentName": "Monaco",
       "address": "475 Washington Blvd, Jersey City, NJ 07310",
@@ -750,6 +757,7 @@
       "id": "J03",
       "mainArea": "Jersey City",
       "mainAreaId": 4,
+      "isSaved": false,
       "subArea": "Newport",
       "apartmentName": "Ellipse",
       "address": "25 Park Ln S, Jersey City, NJ 07310",
@@ -830,6 +838,7 @@
       "id": "M01",
       "mainArea": "Manhattan",
       "mainAreaId": 1,
+      "isSaved": false,
       "subArea": "Uptown Manhattan",
       "apartmentName": "Park West Village",
       "address": "792 COLUMBUS AVENUE, SUITE 1E, NEW YORK, NY 10025",
@@ -898,6 +907,7 @@
       "id": "M02",
       "mainArea": "Manhattan",
       "mainAreaId": 1,
+      "isSaved": false,
       "subArea": "Midtown Manhattan",
       "apartmentName": "MiMA",
       "address": "450 West 42nd Street,NY 10036",
@@ -967,11 +977,11 @@
         }
       ]
     },
-
     {
       "id": "M03",
       "mainArea": "Manhattan",
       "mainAreaId": 1,
+      "isSaved": false,
       "subArea": "Downtown Manhattan",
       "apartmentName": "180 Water Street",
       "address": "180 Water Street,NY 10038",

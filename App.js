@@ -21,7 +21,7 @@ function SearchStackScreen({ navigation }) {
           title: "Search",
           headerStyle: { backgroundColor: "#ef4923" },
           headerTitleStyle: { color: "#ffffff" },
-          headerTintColor: "#0a2e49"
+          headerTintColor: "#0a2e49",
         }}
       />
       <SearchStack.Screen
@@ -31,7 +31,7 @@ function SearchStackScreen({ navigation }) {
           title: "Search Results",
           headerStyle: { backgroundColor: "#ef4923" },
           headerTitleStyle: { color: "#ffffff" },
-          headerTintColor: "#0a2e49"
+          headerTintColor: "#0a2e49",
         }}
       />
       <SearchStack.Screen
@@ -41,7 +41,7 @@ function SearchStackScreen({ navigation }) {
           title: "Detail",
           headerStyle: { backgroundColor: "#ef4923" },
           headerTitleStyle: { color: "#ffffff" },
-          headerTintColor: "#0a2e49"
+          headerTintColor: "#0a2e49",
         }}
       />
     </SearchStack.Navigator>
@@ -58,7 +58,7 @@ function SavedStackScreen() {
           title: "Saved",
           headerStyle: { backgroundColor: "#ef4923" },
           headerTitleStyle: { color: "#ffffff" },
-          headerTintColor: "#0a2e49"
+          headerTintColor: "#0a2e49",
         }}
       />
       <SavedStack.Screen
@@ -68,7 +68,7 @@ function SavedStackScreen() {
           title: "Detail",
           headerStyle: { backgroundColor: "#ef4923" },
           headerTitleStyle: { color: "#ffffff" },
-          headerTintColor: "#0a2e49"
+          headerTintColor: "#0a2e49",
         }}
       />
     </SavedStack.Navigator>
@@ -86,7 +86,7 @@ function ProfileStackScreen() {
           title: "Profile",
           headerStyle: { backgroundColor: "#ef4923" },
           headerTitleStyle: { color: "#ffffff" },
-          headerTintColor: "#0a2e49"
+          headerTintColor: "#0a2e49",
         }}
       />
     </ProfileStack.Navigator>
@@ -109,11 +109,11 @@ export default function App() {
               iconName = "md-person";
             }
             return <Ionicons name={iconName} size={size} color={color} />;
-          }
+          },
         })}
         tabBarOptions={{
           activeTintColor: "#ef4923",
-          inactiveTintColor: "#333333"
+          inactiveTintColor: "#333333",
         }}
       >
         <Tab.Screen name='Search' component={SearchStackScreen} />
