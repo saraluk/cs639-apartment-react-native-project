@@ -1,83 +1,74 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, TextInput, Image } from "react-native";
+import { StyleSheet, Text, View, TouchableHighlight, AsyncStorage, Image } from "react-native";
 import { deviceHeight, deviceWidth } from "../constants/Layout";
+import * as ImagePicker from 'expo-image-picker';
+import Constants from 'expo-constants';
+import * as Permissions from 'expo-permissions';
 
 export default class ProfileScreen extends Component {
-  state = {
-    name: "",
-    username: "",
-    email: "",
-    phone: "",
-    school: ""
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      image: "https://codehs.com/uploads/3fb254527bfe2f367b433f75a741e2b1",
+      name: "",
+      username: "",
+      email: "",
+      phone: "",
+      school: ""
+    }
+  };
+
+  componentDidMount = () => {
+    AsyncStorage.getItem('name').then((value) => this.setState({ 'name': value }));
+    AsyncStorage.getItem('username').then((value) => this.setState({ 'username': value }));
+    AsyncStorage.getItem('email').then((value) => this.setState({ 'email': value }));
+    AsyncStorage.getItem('phone').then((value) => this.setState({ 'phone': value }));
+    AsyncStorage.getItem('school').then((value) => this.setState({ 'school': value }));
+    AsyncStorage.getItem('image').then((value) => this.setState({ 'image': value }));
   };
 
   render() {
+    
     return (
       <View style={styles.container}>
         <View style={styles.profilePhotoContainer}>
           <View style={styles.backgroundContainer}>
-            <Image
-              source={{
-                uri:
-                  "https://codehs.com/uploads/3fb254527bfe2f367b433f75a741e2b1"
-              }}
-              style={styles.photo}
-            />
+            <Image source={{ uri: this.state.image }} style={styles.photo}/>
           </View>
-        </View>
-        <View style={styles.changePhotoButton}>
-          <Text style={styles.changePhotoButtonText}>Change Profile Photo</Text>
         </View>
 
         <View style={styles.profileInfoContainer}>
           <View style={styles.rowContainer}>
             <Text style={styles.sectionHeader}>Personal Information</Text>
-            <Text>Edit</Text>
+            <TouchableHighlight
+              onPress={() => this.props.navigation.navigate("EditProfileScreen")}
+            >
+              <View style={styles.button}>
+                <Text style={styles.buttonText}>Edit</Text>
+              </View>
+            </TouchableHighlight>
+          </View>
+
+          <View style={styles.rowContainer}>
+            <Text style={styles.fieldLabel}>Name: </Text>
+            <Text style={styles.info}>{this.state.name}</Text>
           </View>
           <View style={styles.rowContainer}>
-            <Text style={styles.fieldLabel}>Name</Text>
-            <TextInput
-              style={styles.textInput}
-              onChangeText={name => this.setState({ name })}
-              value={this.state.name}
-              placeholder='Name'
-            />
+            <Text style={styles.fieldLabel}>Username: </Text>
+            <Text style={styles.info}>{this.state.username}</Text>
           </View>
           <View style={styles.rowContainer}>
-            <Text style={styles.fieldLabel}>Username</Text>
-            <TextInput
-              style={styles.textInput}
-              onChangeText={username => this.setState({ username })}
-              value={this.state.username}
-              placeholder='Username'
-            />
+            <Text style={styles.fieldLabel}>Email: </Text>
+            <Text style={styles.info}>{this.state.email}</Text>
           </View>
           <View style={styles.rowContainer}>
-            <Text style={styles.fieldLabel}>Email</Text>
-            <TextInput
-              style={styles.textInput}
-              onChangeText={email => this.setState({ email })}
-              value={this.state.email}
-              placeholder='Email'
-            />
+            <Text style={styles.fieldLabel}>Phone: </Text>
+            <Text style={styles.info}>{this.state.phone}</Text>
           </View>
           <View style={styles.rowContainer}>
-            <Text style={styles.fieldLabel}>Phone</Text>
-            <TextInput
-              style={styles.textInput}
-              onChangeText={phone => this.setState({ phone })}
-              value={this.state.phone}
-              placeholder='Phone'
-            />
-          </View>
-          <View style={styles.rowContainer}>
-            <Text style={styles.fieldLabel}>School</Text>
-            <TextInput
-              style={styles.textInput}
-              onChangeText={school => this.setState({ school })}
-              value={this.state.school}
-              placeholder='School'
-            />
+            <Text style={styles.fieldLabel}>School: </Text>
+            <Text style={styles.info}>{this.state.school}</Text>
           </View>
         </View>
       </View>
@@ -106,13 +97,31 @@ const styles = StyleSheet.create({
     width: 4 * (deviceHeight / 20),
     borderRadius: 100
   },
-  changePhotoButton: {
-    height: deviceHeight / 20,
-    width: deviceWidth
+  buttonContainer: {
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 10
   },
-  changePhotoButtonText: {
+  changePhotoButton: {
+    height: 0.7 * (deviceHeight / 20),
+    width: 10 * (deviceWidth / 20),
+    borderRadius: 50,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#0a2e49"
+  },
+  button: {
+    height: 0.7 * (deviceHeight / 20),
+    width: 4 * (deviceWidth / 20),
+    borderRadius: 50,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#0a2e49"
+  },
+  buttonText: {
     textAlign: "center",
-    fontSize: 0.35 * (deviceHeight / 20)
+    fontSize: 0.35 * (deviceHeight / 20),
+    color: "#ffffff"
   },
   profileInfoContainer: {
     borderTopColor: "#dddddd",
@@ -134,5 +143,10 @@ const styles = StyleSheet.create({
     textAlign: "left",
     borderBottomColor: "#dddddd",
     borderBottomWidth: 1
+  },
+  info: {
+    width: 11 * (deviceWidth / 20),
+    textAlign: "left",
+    marginBottom: 5
   }
 });
