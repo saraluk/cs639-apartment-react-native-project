@@ -4,7 +4,7 @@ import {
   View,
   Image,
   Text,
-  TouchableHighlight
+  TouchableHighlight,
 } from "react-native";
 import { deviceHeight, deviceWidth } from "../constants/Layout";
 import { Ionicons } from "@expo/vector-icons";
@@ -13,7 +13,7 @@ import ShareButton from "./ShareButton";
 
 export default class ApartmentCard extends Component {
   render() {
-    console.log(this);
+    const { apartmentObject, handleToggle, isSaved } = this.props;
     return (
       <TouchableHighlight
         underlayColor='transparent'
@@ -24,28 +24,26 @@ export default class ApartmentCard extends Component {
             <View style={styles.leftContainer}>
               <Image
                 style={styles.thumbnailPhoto}
-                source={{ uri: this.props.apartmentObject.thumbnailPhoto }}
+                source={{ uri: apartmentObject.thumbnailPhoto }}
               />
             </View>
             <View style={styles.rightContainer}>
               <View style={styles.apartmentName}>
                 <Text style={styles.title}>
-                  {this.props.apartmentObject.apartmentName}
+                  {apartmentObject.apartmentName}
                 </Text>
               </View>
               <View style={styles.apartmentSubArea}>
                 <View style={styles.rowContainer}>
                   <Ionicons style={styles.icon} name='ios-pin' />
-                  <Text style={styles.subTitle}>
-                    {this.props.apartmentObject.subArea}
-                  </Text>
+                  <Text style={styles.subTitle}>{apartmentObject.subArea}</Text>
                 </View>
               </View>
               <View style={styles.apartmentPriceRange}>
                 <View style={styles.rowContainer}>
                   <Ionicons style={styles.icon} name='md-cash' />
                   <Text style={styles.subTitle}>
-                    {this.props.apartmentObject.priceRange}
+                    {apartmentObject.priceRange}
                   </Text>
                 </View>
               </View>
@@ -53,14 +51,16 @@ export default class ApartmentCard extends Component {
                 <View style={styles.rowContainer}>
                   <Ionicons style={styles.icon} name='md-bed' />
                   <Text style={styles.subTitle}>
-                    {this.props.apartmentObject.roomTypes}
+                    {apartmentObject.roomTypes}
                   </Text>
                 </View>
               </View>
               <View style={styles.buttonContainer}>
                 <View style={styles.rowContainer}>
                   <SaveButton
-                    apartmentObject={this.props.apartmentObject}
+                    apartmentObject={apartmentObject}
+                    isSaved={isSaved}
+                    handleToggle={() => handleToggle(apartmentObject.id)}
                   ></SaveButton>
                   <View style={styles.space}></View>
                   <ShareButton></ShareButton>
@@ -81,55 +81,55 @@ const styles = StyleSheet.create({
     marginBottom: (0.5 * deviceHeight) / 20,
     backgroundColor: "#eaeaea",
     borderRadius: 10,
-    justifyContent: "center"
+    justifyContent: "center",
   },
   rowContainer: {
     flexDirection: "row",
-    flex: 1
+    flex: 1,
   },
   leftContainer: {
     flex: 1.5,
     overflow: "hidden",
-    padding: 0.5 * (deviceWidth / 20)
+    padding: 0.5 * (deviceWidth / 20),
   },
   thumbnailPhoto: {
     flex: 1,
     width: "100%",
-    borderRadius: 10
+    borderRadius: 10,
   },
   rightContainer: {
-    flex: 2
+    flex: 2,
   },
   apartmentName: {
     flex: 1.5,
-    justifyContent: "center"
+    justifyContent: "center",
   },
   apartmentSubArea: {
-    flex: 1
+    flex: 1,
   },
   apartmentPriceRange: {
-    flex: 1
+    flex: 1,
   },
   apartmentRoomTypes: {
-    flex: 1
+    flex: 1,
   },
   buttonContainer: {
     flex: 1.5,
-    justifyContent: "center"
+    justifyContent: "center",
   },
   title: {
     fontSize: 0.4 * (deviceHeight / 20),
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
   icon: {
     fontSize: 0.4 * (deviceHeight / 20),
     fontWeight: "bold",
-    marginRight: 5
+    marginRight: 5,
   },
   subTitle: {
-    fontSize: 0.35 * (deviceHeight / 20)
+    fontSize: 0.35 * (deviceHeight / 20),
   },
   space: {
-    width: 0.3 * (deviceWidth / 20)
-  }
+    width: 0.3 * (deviceWidth / 20),
+  },
 });

@@ -3,38 +3,18 @@ import { View, Text, StyleSheet, TouchableHighlight } from "react-native";
 import { deviceHeight, deviceWidth } from "../constants/Layout";
 import { Ionicons } from "@expo/vector-icons";
 
-const savedList = require("../util/SavedList.json");
-
 export default class SaveButton extends Component {
-  state = {
-    onPressColor: "transparent",
-    isSaved: true,
-    savedList: savedList.savedApartment,
-  };
-
-  handleButtonOnPress = () => {
-    let toggle = this.state.isSaved;
-    this.setState({
-      isSaved: !toggle,
-    });
-    if (toggle) {
-      this.setState({
-        onPressColor: "#ffffff",
-      });
-      //need to fix
-      this.state.savedList.push(this.props.apartmentObject);
-      console.log(this.state.savedList);
-    } else {
-      this.setState({
-        onPressColor: "transparent",
-      });
+  componentDidUpdate(prevProp) {
+    if (this.props.isSaved !== prevProp.isSaved) {
+      console.log("SaveButton componentDidUpdate is called");
     }
-  };
+  }
 
   render() {
+    const { handleToggle, isSaved } = this.props;
     return (
       <TouchableHighlight
-        onPress={this.handleButtonOnPress}
+        onPress={handleToggle}
         underlayColor='transparent'
         style={styles.container}
       >
@@ -48,7 +28,7 @@ export default class SaveButton extends Component {
             borderColor: "#ef4923",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: this.state.onPressColor,
+            backgroundColor: isSaved ? "#ef4923" : "transparent",
           }}
         >
           <Ionicons style={styles.icon} name='ios-bookmark' />

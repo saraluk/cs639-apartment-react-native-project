@@ -4,12 +4,14 @@ import SearchBar from "../components/SearchBar";
 import ApartmentCard from "../components/ApartmentCard";
 
 const data = require("../util/Data.json");
+const list = require("../util/SavedList.json");
 
 export default class SearchResultScreen extends Component {
   state = {
     apartments: data.apartments,
     filteredList: [],
-    mainArea: ""
+    mainArea: "",
+    savedList: list.savedApartment,
   };
 
   componentDidMount() {
@@ -18,19 +20,65 @@ export default class SearchResultScreen extends Component {
     const mainAreaName = params.mainArea;
     let filtered;
     if (mainAreaId != null) {
-      filtered = this.state.apartments.filter(apartment => {
+      filtered = this.state.apartments.filter((apartment) => {
         return apartment.mainAreaId == mainAreaId;
       });
       console.log(filtered);
     } else {
       filtered = this.state.apartments;
     }
-
     this.setState({
       filteredList: filtered,
-      mainArea: mainAreaName
+      mainArea: mainAreaName,
     });
   }
+
+  handleToggle = (apartmentId) => {
+    const apartment = this.state.filteredList.find(
+      (apartment) => apartment.id == apartmentId
+    );
+    apartment["isSaved"] = !apartment["isSaved"];
+    if (apartment["isSaved"] == true) {
+      list.savedApartment.push(apartment);
+      this.setState({
+        savedList: list.savedApartment,
+      });
+    } else {
+      list["savedApartment"] = list.savedApartment.filter(
+        (apartment) => apartment.id !== apartmentId
+      );
+      this.setState(() => ({
+        savedList: list.savedApartment,
+      }));
+    }
+  };
+
+  // handleToggle = async (apartmentId) => {
+  //   const apartment = this.state.filteredList.find(
+  //     (apartment) => apartment.id == apartmentId
+  //   );
+  //   apartment["isSaved"] = !apartment["isSaved"];
+  //   if (apartment["isSaved"] == true) {
+  //     const updatedSaveList = [...this.state.savedList, apartment];
+  //     this.setState(() => ({
+  //       savedList: updatedSaveList,
+  //     }));
+  //   } else {
+  //     const updatedSaveList = this.state.savedList.filter(
+  //       (apartment) => apartment.id !== apartmentId
+  //     );
+  //     this.setState(() => ({
+  //       savedList: updatedSaveList,
+  //     }));
+  //   }
+  //   try {
+  //     const apartmentJSON = JSON.stringify(this.state.savedList);
+  //     await AsyncStorage.setItem("apartment", apartmentJSON);
+  //     console.log(this.state.savedList.length);
+  //   } catch (err) {
+  //     console.log("Error Saving Data ", err);
+  //   }
+  // };
 
   render() {
     return (
@@ -41,16 +89,18 @@ export default class SearchResultScreen extends Component {
         ></SearchBar>
         <ScrollView>
           {this.state.filteredList.length > 0 &&
-            this.state.filteredList.map(apartment => (
+            this.state.filteredList.map((apartment) => (
               <ApartmentCard
                 key={apartment.id}
                 apartmentObject={apartment}
+                isSaved={apartment["isSaved"]}
+                handleToggle={this.handleToggle}
                 onPress={() =>
                   this.props.navigation.navigate("ApartmentDetailScreen", {
-                    key: apartment.id
+                    key: apartment.id,
                   })
                 }
-              ></ApartmentCard>
+              />
             ))}
         </ScrollView>
       </View>
@@ -61,6 +111,6 @@ export default class SearchResultScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#ffffff"
-  }
+    backgroundColor: "#ffffff",
+  },
 });
