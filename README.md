@@ -66,7 +66,7 @@ git checkout master
 git pull
 ```
 
-Now your local repository has the most update code from Master branch, then create new branch to work on something else
+Now your local repository has the most updated code from Master branch, then create new branch to work on something else
 (Do not use the branch that has already been merged, create new branch)
 ```bash
 git checkout -b feat/[branch-name]
