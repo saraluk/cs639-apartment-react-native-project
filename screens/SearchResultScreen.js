@@ -43,6 +43,7 @@ export default class SearchResultScreen extends Component {
       this.setState({
         savedList: list.savedApartment,
       });
+      console.log(this.state.savedList.length);
     } else {
       list["savedApartment"] = list.savedApartment.filter(
         (apartment) => apartment.id !== apartmentId
