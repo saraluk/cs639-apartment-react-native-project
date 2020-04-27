@@ -4,7 +4,7 @@ import {
   StyleSheet,
   Text,
   Image,
-  TouchableHighlight
+  TouchableHighlight,
 } from "react-native";
 import { deviceHeight, deviceWidth } from "../constants/Layout";
 import { TextInput } from "react-native-gesture-handler";
@@ -15,17 +15,17 @@ export default class ContactForm extends Component {
     lastName: "",
     email: "",
     phone: "",
-    message: ""
+    message: "",
   };
   newState = () => {
     this.setState({
       firstName: "",
-      astName: "",
+      lastName: "",
       email: "",
       phone: "",
-      message: ""
-    })
-  }
+      message: "",
+    });
+  };
 
   render() {
     return (
@@ -33,13 +33,13 @@ export default class ContactForm extends Component {
         <View style={styles.rowContainer}>
           <TextInput
             style={styles.textInputHalf}
-            onChangeText={firstName => this.setState({ firstName })}
+            onChangeText={(firstName) => this.setState({ firstName })}
             value={this.state.firstName}
             placeholder='First Name'
           />
           <TextInput
             style={styles.textInputHalf}
-            onChangeText={lastName => this.setState({ lastName })}
+            onChangeText={(lastName) => this.setState({ lastName })}
             value={this.state.lastName}
             placeholder='Last Name'
           />
@@ -47,13 +47,13 @@ export default class ContactForm extends Component {
         <View style={styles.rowContainer}>
           <TextInput
             style={styles.textInputHalf}
-            onChangeText={email => this.setState({ email })}
+            onChangeText={(email) => this.setState({ email })}
             value={this.state.email}
             placeholder='Email Address'
           />
           <TextInput
             style={styles.textInputHalf}
-            onChangeText={phone => this.setState({ phone })}
+            onChangeText={(phone) => this.setState({ phone })}
             value={this.state.phone}
             placeholder='Phone Number'
           />
@@ -62,7 +62,7 @@ export default class ContactForm extends Component {
           <TextInput
             style={styles.textInputFull}
             multiline={true}
-            onChangeText={message => this.setState({ message })}
+            onChangeText={(message) => this.setState({ message })}
             value={this.state.message}
             placeholder='Messages...'
           />
@@ -72,8 +72,8 @@ export default class ContactForm extends Component {
             <TouchableHighlight
               underlayColor='transparent'
               style={styles.button}
-              onPress={() => { 
-                alert('Your Messages have sent!') 
+              onPress={() => {
+                alert(this.state.firstName + ", your message has been sent!");
               }}
             >
               <View>
@@ -83,12 +83,10 @@ export default class ContactForm extends Component {
             <View style={styles.space}></View>
             <TouchableHighlight
               underlayColor='transparent'
-              style={styles.button}             
+              style={styles.button}
             >
               <View>
-                <Text style={styles.buttonText}
-                      onPress={this.newState}
-                >
+                <Text style={styles.buttonText} onPress={this.newState}>
                   Reset
                 </Text>
               </View>
@@ -104,11 +102,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingVertical: 0.5 * (deviceWidth / 20),
-    paddingRight: 2 * (deviceWidth / 20)
+    paddingRight: 2 * (deviceWidth / 20),
   },
   rowContainer: {
     flexDirection: "row",
-    marginBottom: 0.2 * (deviceHeight / 20)
+    marginBottom: 0.2 * (deviceHeight / 20),
   },
   textInputHalf: {
     height: 0.8 * (deviceHeight / 20),
@@ -118,7 +116,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     backgroundColor: "#eaeaea",
     marginRight: 0.5 * (deviceWidth / 20),
-    padding: 4
+    padding: 4,
   },
   textInputFull: {
     height: 3 * (deviceHeight / 20),
@@ -128,10 +126,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     backgroundColor: "#eaeaea",
     marginRight: 0.5 * (deviceWidth / 20),
-    padding: 4
+    padding: 4,
   },
   buttonContainer: {
-    alignItems: "flex-end"
+    alignItems: "flex-end",
   },
   button: {
     height: 0.7 * (deviceHeight / 20),
@@ -139,12 +137,12 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#0a2e49"
+    backgroundColor: "#0a2e49",
   },
   buttonText: {
-    color: "#ffffff"
+    color: "#ffffff",
   },
   space: {
-    width: 0.3 * (deviceWidth / 20)
-  }
+    width: 0.3 * (deviceWidth / 20),
+  },
 });
