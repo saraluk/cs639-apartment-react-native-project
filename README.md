@@ -60,7 +60,7 @@ git add .
 git commit -m [commit-message]
 git push
 ```
-### After your branch is merged to Master branch, do this :
+### After your branch has been merged to Master branch, do these:
 ```bash
 git checkout master
 git pull
