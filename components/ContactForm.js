@@ -17,6 +17,15 @@ export default class ContactForm extends Component {
     phone: "",
     message: ""
   };
+  newState = () => {
+    this.setState({
+      firstName: "",
+      astName: "",
+      email: "",
+      phone: "",
+      message: ""
+    })
+  }
 
   render() {
     return (
@@ -63,6 +72,9 @@ export default class ContactForm extends Component {
             <TouchableHighlight
               underlayColor='transparent'
               style={styles.button}
+              onPress={() => { 
+                alert('Your Messages have sent!') 
+              }}
             >
               <View>
                 <Text style={styles.buttonText}>Send</Text>
@@ -71,10 +83,14 @@ export default class ContactForm extends Component {
             <View style={styles.space}></View>
             <TouchableHighlight
               underlayColor='transparent'
-              style={styles.button}
+              style={styles.button}             
             >
               <View>
-                <Text style={styles.buttonText}>Reset</Text>
+                <Text style={styles.buttonText}
+                      onPress={this.newState}
+                >
+                  Reset
+                </Text>
               </View>
             </TouchableHighlight>
           </View>
