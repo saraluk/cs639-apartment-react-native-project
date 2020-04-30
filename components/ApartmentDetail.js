@@ -57,27 +57,28 @@ export default class ApartmentDetail extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#ffffff"
+    backgroundColor: "#ffffff",
   },
   buttonContainer: {
     flexDirection: "row",
     justifyContent: "flex-end",
     marginVertical: 0.3 * (deviceHeight / 20),
-    marginHorizontal: 0.4 * (deviceHeight / 20)
+    marginHorizontal: 0.4 * (deviceHeight / 20),
   },
   detailContainer: {
-    marginLeft: 2 * (deviceWidth / 20)
+    marginLeft: 2 * (deviceWidth / 20),
+    marginBottom: 4 * (deviceHeight / 20),
   },
   apartmentName: {
     fontSize: 0.6 * (deviceHeight / 20),
     fontWeight: "bold",
-    color: "#0a2e49"
+    color: "#0a2e49",
   },
   apartmentAddress: {
     fontSize: 0.35 * (deviceHeight / 20),
-    color: "#0a2e49"
+    color: "#0a2e49",
   },
   space: {
-    width: 0.3 * (deviceWidth / 20)
-  }
+    width: 0.3 * (deviceWidth / 20),
+  },
 });

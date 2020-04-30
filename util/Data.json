@@ -887,19 +887,9 @@
       "agentEmail": "smith@gmail.com",
       "comments": [
         {
-          "username": "",
-          "comment": "",
-          "rating": ""
-        },
-        {
-          "username": "",
-          "comment": "",
-          "rating": ""
-        },
-        {
-          "username": "",
-          "comment": "",
-          "rating": ""
+          "username": "Jessica",
+          "comment": "Good staff, good location,  good rooms",
+          "rating": "4"
         }
       ]
     },
@@ -961,19 +951,14 @@
       "agentEmail": "benstone@gmail.com",
       "comments": [
         {
-          "username": "",
-          "comment": "",
-          "rating": ""
+          "username": "Cindy",
+          "comment": "Luxury building with nice view and great amenities including swimming pool. Might consider living here if there are apartments available.",
+          "rating": "4"
         },
         {
-          "username": "",
-          "comment": "",
-          "rating": ""
-        },
-        {
-          "username": "",
-          "comment": "",
-          "rating": ""
+          "username": "Jackie Jay",
+          "comment": "Love it! Amazing views! Feels like hotel living bit with the comfort of home.",
+          "rating": "5"
         }
       ]
     },
@@ -1031,19 +1016,14 @@
       "agentEmail": "maureen.charles@gmail.com",
       "comments": [
         {
-          "username": "",
-          "comment": "",
-          "rating": ""
+          "username": "Julia",
+          "comment": "Very modern and great amenities",
+          "rating": "4"
         },
         {
-          "username": "",
-          "comment": "",
-          "rating": ""
-        },
-        {
-          "username": "",
-          "comment": "",
-          "rating": ""
+          "username": "Tommy",
+          "comment": "Extremely slow and poor management, tried to sign the lease, while waiting for their response found a better option.",
+          "rating": "1"
         }
       ]
     }
