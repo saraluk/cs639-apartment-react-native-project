@@ -4,53 +4,81 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  TouchableHighlight
+  TouchableHighlight,
+  AsyncStorage,
 } from "react-native";
 import { deviceHeight, deviceWidth } from "../constants/Layout";
 import { Ionicons } from "@expo/vector-icons";
 
 export default class Comment extends Component {
+  state = {
+    rating: 0,
+    list: this.props.apartmentObject.comments,
+    commentMessage: "",
+    username: "",
+  };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      rating: "",
-      list: [],
-      commentMessage: ""
-    };
+  componentDidMount() {
+    AsyncStorage.getItem("username").then((value) =>
+      this.setState({ username: value })
+    );
   }
 
-  handleButtonClick() {
+  handleButtonClick = (rate) => {
+    if (rate > 5 || rate < 1) {
+      return alert("Invalid Rating");
+    } else {
+      this.setState({
+        list: [
+          ...this.state.list,
+          {
+            rating: this.state.rating,
+            comment: this.state.commentMessage,
+            username: this.state.username,
+          },
+        ],
+        commentMessage: "",
+        rating: "",
+      });
+    }
+  };
+
+  handleButtunReset = () => {
     this.setState({
-      list: [...this.state.list, this.state.commentMessage],
-      commentMessage: ''
-    })
-  }
+      commentMessage: "",
+      rating: "",
+    });
+  };
 
-  // handleInputChange(e) {
-  //   this.setState({
-  //     commentMessage: e.target.value
-  //   })
-  // }
+  getRating = (rate) => {
+    if (rate > 5 || rate < 1) {
+      return;
+    } else {
+      let i = 0;
+      let stars = [];
+      while (i < rate) {
+        i++;
+        stars.push(<Ionicons style={styles.icon} name='ios-star' />);
+      }
+      return stars;
+    }
+  };
+
   render() {
     return (
       <View style={styles.container}>
         {this.state.list.length > 0 &&
-          this.state.list.map((commentMessage, index) => (
-            <View key={index} style={styles.commentDisplayContainer}>
+          this.state.list.map((comment) => (
+            <View style={styles.commentDisplayContainer}>
               <View style={styles.rowContainer}>
-                <Text style={styles.username}>{commentMessage.username}</Text>
+                <Text style={styles.username}>{comment.username}</Text>
                 <View style={styles.starIconContainer}>
-                  <Ionicons style={styles.icon} name='ios-star' />
-                  <Ionicons style={styles.icon} name='ios-star' />
-                  <Ionicons style={styles.icon} name='ios-star' />
-                  <Ionicons style={styles.icon} name='ios-star' />
-                  <Ionicons style={styles.icon} name='ios-star' />
+                  {this.getRating(comment.rating)}
                 </View>
               </View>
               <View>
                 <Text>
-                  <li key={index}>{commentMessage}</li>
+                  <Text>{comment.comment}</Text>
                 </Text>
               </View>
             </View>
@@ -59,17 +87,18 @@ export default class Comment extends Component {
           <Text>Add Your Comment</Text>
           <TextInput
             style={styles.textInput}
-            onChangeText={rating => this.setState({ rating })}
+            onChangeText={(rating) => this.setState({ rating })}
             value={this.state.rating}
-            placeholder='Select Rating'
+            placeholder='Rate from 1 - 5'
+            keyboardType='numeric'
           />
           <TextInput
             multiline={true}
             style={styles.textInputBox}
             onChangeText={(text) => {
               this.setState({
-                commentMessage: text
-              })
+                commentMessage: text,
+              });
             }}
             value={this.state.commentMessage}
             placeholder='Share your own experience at this place...'
@@ -77,11 +106,10 @@ export default class Comment extends Component {
         </View>
         <View style={styles.buttonContainer}>
           <View style={styles.rowContainer}>
-
             <TouchableHighlight
               underlayColor='transparent'
               style={styles.button}
-              onPress={this.handleButtonClick.bind(this)}
+              onPress={() => this.handleButtonClick(this.state.rating)}
             >
               <View>
                 <Text style={styles.buttonText}>Submit</Text>
@@ -92,6 +120,7 @@ export default class Comment extends Component {
             <TouchableHighlight
               underlayColor='transparent'
               style={styles.button}
+              onPress={this.handleButtunReset}
             >
               <View>
                 <Text style={styles.buttonText}>Reset</Text>
@@ -107,7 +136,7 @@ export default class Comment extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingRight: 2 * (deviceWidth / 20)
+    paddingRight: 2 * (deviceWidth / 20),
   },
   commentDisplayContainer: {
     minHeight: 2 * (deviceHeight / 20),
@@ -115,21 +144,21 @@ const styles = StyleSheet.create({
     backgroundColor: "#eaeaea",
     borderRadius: 10,
     padding: 10,
-    marginBottom: 0.3 * (deviceHeight / 20)
+    marginBottom: 0.3 * (deviceHeight / 20),
   },
   rowContainer: {
     flexDirection: "row",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
   },
   username: {
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
   starIconContainer: {
-    flexDirection: "row"
+    flexDirection: "row",
   },
   icon: {
     fontSize: 0.5 * (deviceHeight / 20),
-    color: "#ef4923"
+    color: "#ef4923",
   },
   textInput: {
     height: 0.8 * (deviceHeight / 20),
@@ -139,7 +168,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     backgroundColor: "#eaeaea",
     padding: 4,
-    marginBottom: 0.2 * (deviceHeight / 20)
+    marginBottom: 0.2 * (deviceHeight / 20),
   },
   textInputBox: {
     height: 3 * (deviceHeight / 20),
@@ -150,11 +179,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#eaeaea",
     marginRight: 0.5 * (deviceWidth / 20),
     padding: 4,
-    marginBottom: 0.2 * (deviceHeight / 20)
+    marginBottom: 0.2 * (deviceHeight / 20),
   },
   buttonContainer: {
     alignItems: "flex-end",
-    marginBottom: 1 * (deviceHeight / 20)
+    marginBottom: 1 * (deviceHeight / 20),
   },
   button: {
     height: 0.7 * (deviceHeight / 20),
@@ -162,12 +191,12 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#0a2e49"
+    backgroundColor: "#0a2e49",
   },
   buttonText: {
-    color: "#ffffff"
+    color: "#ffffff",
   },
   space: {
-    width: 0.3 * (deviceWidth / 20)
-  }
+    width: 0.3 * (deviceWidth / 20),
+  },
 });
