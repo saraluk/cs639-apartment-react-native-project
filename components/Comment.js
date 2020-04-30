@@ -10,18 +10,36 @@ import { deviceHeight, deviceWidth } from "../constants/Layout";
 import { Ionicons } from "@expo/vector-icons";
 
 export default class Comment extends Component {
-  state = {
-    rating: "",
-    commentMessage: ""
-  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      rating: "",
+      list: [],
+      commentMessage: ""
+    };
+  }
+
+  handleButtonClick() {
+    this.setState({
+      list: [...this.state.list, this.state.commentMessage],
+      commentMessage: ''
+    })
+  }
+
+  // handleInputChange(e) {
+  //   this.setState({
+  //     commentMessage: e.target.value
+  //   })
+  // }
   render() {
     return (
       <View style={styles.container}>
-        {this.props.apartmentObject.comments.length > 0 &&
-          this.props.apartmentObject.comments.map((comment, index) => (
+        {this.state.list.length > 0 &&
+          this.state.list.map((commentMessage, index) => (
             <View key={index} style={styles.commentDisplayContainer}>
               <View style={styles.rowContainer}>
-                <Text style={styles.username}>{comment.username}</Text>
+                <Text style={styles.username}>{commentMessage.username}</Text>
                 <View style={styles.starIconContainer}>
                   <Ionicons style={styles.icon} name='ios-star' />
                   <Ionicons style={styles.icon} name='ios-star' />
@@ -31,7 +49,9 @@ export default class Comment extends Component {
                 </View>
               </View>
               <View>
-                <Text>{comment.comment}</Text>
+                <Text>
+                  <li key={index}>{commentMessage}</li>
+                </Text>
               </View>
             </View>
           ))}
@@ -46,21 +66,28 @@ export default class Comment extends Component {
           <TextInput
             multiline={true}
             style={styles.textInputBox}
-            onChangeText={commentMessage => this.setState({ commentMessage })}
+            onChangeText={(text) => {
+              this.setState({
+                commentMessage: text
+              })
+            }}
             value={this.state.commentMessage}
             placeholder='Share your own experience at this place...'
           />
         </View>
         <View style={styles.buttonContainer}>
           <View style={styles.rowContainer}>
+
             <TouchableHighlight
               underlayColor='transparent'
               style={styles.button}
+              onPress={this.handleButtonClick.bind(this)}
             >
               <View>
                 <Text style={styles.buttonText}>Submit</Text>
               </View>
             </TouchableHighlight>
+
             <View style={styles.space}></View>
             <TouchableHighlight
               underlayColor='transparent'
