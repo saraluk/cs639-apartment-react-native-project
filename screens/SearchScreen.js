@@ -18,7 +18,7 @@ export default class SearchScreen extends Component {
               onPress={() =>
                 this.props.navigation.navigate("SearchResultScreen", {
                   key: 1,
-                  mainArea: "Manhattan"
+                  mainArea: "Manhattan",
                 })
               }
             />
@@ -27,7 +27,7 @@ export default class SearchScreen extends Component {
               onPress={() =>
                 this.props.navigation.navigate("SearchResultScreen", {
                   key: 2,
-                  mainArea: "Long Island City"
+                  mainArea: "Long Island City",
                 })
               }
             />
@@ -38,7 +38,7 @@ export default class SearchScreen extends Component {
               onPress={() =>
                 this.props.navigation.navigate("SearchResultScreen", {
                   key: 3,
-                  mainArea: "Brooklyn"
+                  mainArea: "Brooklyn",
                 })
               }
             />
@@ -47,7 +47,7 @@ export default class SearchScreen extends Component {
               onPress={() =>
                 this.props.navigation.navigate("SearchResultScreen", {
                   key: 4,
-                  mainArea: "Jersey City"
+                  mainArea: "Jersey City",
                 })
               }
             />
@@ -58,7 +58,7 @@ export default class SearchScreen extends Component {
               onPress={() =>
                 this.props.navigation.navigate("SearchResultScreen", {
                   key: 5,
-                  mainArea: "Others"
+                  mainArea: "Others",
                 })
               }
             />
@@ -67,7 +67,7 @@ export default class SearchScreen extends Component {
               onPress={() =>
                 this.props.navigation.navigate("SearchResultScreen", {
                   key: null,
-                  mainArea: "All"
+                  mainArea: "All",
                 })
               }
             />
@@ -79,36 +79,36 @@ export default class SearchScreen extends Component {
 }
 
 SearchScreen.navigationOptions = {
-  header: null
+  header: null,
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#142536"
+    backgroundColor: "#142536",
   },
   TitleTextContainer: {
     height: (2.8 * deviceHeight) / 20,
-    padding: deviceWidth / 20
+    padding: deviceWidth / 20,
   },
   TitleText: {
     color: "#ef4923",
     fontSize: 0.9 * (deviceHeight / 20),
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
   SubTitleText: {
     color: "#ffffff",
     fontSize: (0.55 * deviceHeight) / 20,
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
   buttonContainer: {
     flex: 1,
     marginBottom: 0.5 * (deviceHeight / 20),
-    alignItems: "center"
+    alignItems: "center",
   },
   rowContainer: {
     flex: 1,
     flexDirection: "row",
-    alignItems: "center"
-  }
+    alignItems: "center",
+  },
 });
