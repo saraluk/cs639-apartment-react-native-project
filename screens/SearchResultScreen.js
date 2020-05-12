@@ -12,6 +12,8 @@ export default class SearchResultScreen extends Component {
     filteredList: [],
     mainArea: "",
     savedList: list.savedApartment,
+    searchText: "",
+    mainAreaList: [],
   };
 
   componentDidMount() {
@@ -30,6 +32,7 @@ export default class SearchResultScreen extends Component {
     this.setState({
       filteredList: filtered,
       mainArea: mainAreaName,
+      mainAreaList: filtered,
     });
   }
 
@@ -54,32 +57,16 @@ export default class SearchResultScreen extends Component {
     }
   };
 
-  // handleToggle = async (apartmentId) => {
-  //   const apartment = this.state.filteredList.find(
-  //     (apartment) => apartment.id == apartmentId
-  //   );
-  //   apartment["isSaved"] = !apartment["isSaved"];
-  //   if (apartment["isSaved"] == true) {
-  //     const updatedSaveList = [...this.state.savedList, apartment];
-  //     this.setState(() => ({
-  //       savedList: updatedSaveList,
-  //     }));
-  //   } else {
-  //     const updatedSaveList = this.state.savedList.filter(
-  //       (apartment) => apartment.id !== apartmentId
-  //     );
-  //     this.setState(() => ({
-  //       savedList: updatedSaveList,
-  //     }));
-  //   }
-  //   try {
-  //     const apartmentJSON = JSON.stringify(this.state.savedList);
-  //     await AsyncStorage.setItem("apartment", apartmentJSON);
-  //     console.log(this.state.savedList.length);
-  //   } catch (err) {
-  //     console.log("Error Saving Data ", err);
-  //   }
-  // };
+  handleSearch = (text) => {
+    let match = this.state.mainAreaList.filter(function (apt) {
+      return apt.subArea.toLowerCase().includes(text.toLowerCase());
+    });
+
+    this.setState({
+      searchText: text,
+      filteredList: match,
+    });
+  };
 
   render() {
     return (
@@ -87,6 +74,8 @@ export default class SearchResultScreen extends Component {
         <SearchBar
           mainArea={this.state.mainArea}
           results={this.state.filteredList.length}
+          handleSearch={this.handleSearch}
+          searchText={this.state.searchText}
         ></SearchBar>
         <ScrollView>
           {this.state.filteredList.length > 0 &&

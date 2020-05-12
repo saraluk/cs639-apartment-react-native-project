@@ -18,11 +18,6 @@ export default class ApartmentDetail extends Component {
     return (
       <View style={styles.container}>
         <PhotosSlider apartmentObject={this.props.apartmentObject} />
-        <View style={styles.buttonContainer}>
-          <SaveButton />
-          <View style={styles.space}></View>
-          <ShareButton />
-        </View>
         <View style={styles.detailContainer}>
           <View>
             <Text style={styles.apartmentName}>
@@ -59,13 +54,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#ffffff",
   },
-  buttonContainer: {
-    flexDirection: "row",
-    justifyContent: "flex-end",
-    marginVertical: 0.3 * (deviceHeight / 20),
-    marginHorizontal: 0.4 * (deviceHeight / 20),
-  },
   detailContainer: {
+    marginTop: 0.5 * (deviceHeight / 20),
     marginLeft: 2 * (deviceWidth / 20),
     marginBottom: 4 * (deviceHeight / 20),
   },
